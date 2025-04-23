@@ -2,91 +2,70 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum – D&T Transporte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background: #f9f9f9;
-      color: #333;
-    }
-    h1, h2 {
-      color: #222;
-    }
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      text-decoration: none;
-      background: #333;
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
+      background-size: cover;
       color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
     }
-    a:hover {
-      background: #555;
+
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      text-align: center;
+      padding: 3rem 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     }
-  </style>
-</head>
-<body>
 
-<h1>Impressum</h1>
+    header img {
+      width: 120px;
+      filter: drop-shadow(0 0 5px white);
+      margin-bottom: 1rem;
+    }
 
-<h2>Angaben gemäß § 5 TMG</h2>
-<p>
-  Virtuelle Spedition: <strong>D&T Transporte</strong><br>
-  Vertreten durch den Inhaber: <strong>Darius Darula</strong><br>
-  Anschrift: <strong>91126 Kammerstein</strong><br>
-  E-Mail: <a href="mailto:info.darsperspedition@gmail.com">info.darsperspedition@gmail.com</a><br>
-  Discord-Server: <a href="https://discord.gg/uE5zRy26gn" target="_blank">https://discord.gg/uE5zRy26gn</a>
-</p>
+    header h1 {
+      font-size: 3rem;
+      color: #00e6e6;
+      margin-bottom: 0.5rem;
+    }
 
-<h2>Verantwortlich nach § 55 Abs. 2 RStV</h2>
-<p>
-  Darius Darula<br>
-  91126 Kammerstein<br>
-  E-Mail: <a href="mailto:info.darsperspedition@gmail.com">info.darsperspedition@gmail.com</a>
-</p>
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
 
-<h2>Haftungsausschluss</h2>
-<p>
-  Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Inhalte externer Links.
-  Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-</p>
+    main {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: 3rem auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    }
 
-<h2>Urheberrecht</h2>
-<p>
-  Die durch die Betreiber dieser virtuellen Spedition erstellten Inhalte und Werke (z. B. Logos, Lackierungen, Texte)
-  unterliegen dem deutschen Urheberrecht. Eine Vervielfältigung oder Verwertung ist nur mit schriftlicher Zustimmung erlaubt.
-</p>
+    h2 {
+      font-size: 2rem;
+      color: #00e6e6;
+      border-bottom: 2px solid #00e6e6;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
 
-<h2>Datenschutzerklärung gemäß DSGVO</h2>
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
 
-<h3>Allgemeines</h3>
-<p>
-  Der Schutz deiner persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung informiert darüber,
-  welche personenbezogenen Daten im Rahmen dieses rein virtuellen Speditionsprojekts erhoben und verarbeitet werden.
-</p>
-
-<h3>Verantwortlicher</h3>
-<p>
-  Darius Darula<br>
-  91126 Kammerstein<br>
-  E-Mail: <a href="mailto:info.darsperspedition@gmail.com">info.darsperspedition@gmail.com</a>
-</p>
-
-<h3>Erhebung und Speicherung personenbezogener Daten</h3>
-<ul>
-  <li>Discord-Benutzername und ID</li>
-  <li>Zeitstempel der Anmeldung/Kommunikation</li>
-  <li><strong>Vorname</strong> (falls angegeben im Bewerbungsformular oder Gespräch)</li>
-  <li><strong>E-Mail-Adresse</strong> (bei Bewerbungen)</li>
-</ul>
-<p>
-  Diese Daten dienen ausschließlich der Organisation des Spielbetriebs sowie der Bearbeitung von Bewerbungen.
-</p>
-<p><strong>Rechtsgrundlage:</strong><br>
-  Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung innerhalb des Community-Rahmens)<br>
-  Art. 6 Abs.
+    .btn {
+      display: inline-block;
+      padding: 1rem 2
