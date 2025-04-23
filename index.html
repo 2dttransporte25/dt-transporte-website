@@ -27,11 +27,35 @@
       justify-content: center;
       gap: 2rem;
       padding: 1rem;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      position: relative;
+    }
+    nav .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1f2937;
+      min-width: 160px;
+      z-index: 1;
+      top: 100%;
+      left: 0;
+    }
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    nav .dropdown-content a {
+      display: block;
+      padding: 0.5rem;
+      color: white;
+      text-align: left;
     }
     section {
       max-width: 900px;
@@ -75,17 +99,28 @@
     <p>Willkommen bei unserer virtuellen Spedition!</p>
   </header>
   <nav>
-    <a href="#ueber">Über uns</a>
+    <a href="#ueber">Startseite</a>
     <a href="#fuhrpark">Fuhrpark</a>
     <a href="#events">Events</a>
-    <a href="#team">Team</a>
+    <div class="dropdown">
+      <a href="#">Über uns</a>
+      <div class="dropdown-content">
+        <a href="#ueber">Unser Leitbild</a>
+        <a href="#team">Team</a>
+      </div>
+    </div>
     <a href="#bewerbung">Bewerbung</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
 
   <section id="ueber">
-    <h2>Über uns</h2>
+    <h2>Unser Leitbild</h2>
     <p>D&T Transporte ist eine aktive virtuelle Spedition, die sich auf gemeinsame Fahrten in Euro Truck Simulator 2 und American Truck Simulator spezialisiert. Wir bieten eine strukturierte Community, regelmäßige Touren und viel Spaß auf der Straße.</p>
+  </section>
+
+  <section id="team">
+    <h2>Das Team</h2>
+    <p>Unser Team besteht aus erfahrenen Fahrern und Organisatoren, die gemeinsam den Betrieb der Spedition ermöglichen. Fahrerlisten anderer Speditionen (RSL, FIR Network) sind bewusst nicht enthalten.</p>
   </section>
 
   <section id="fuhrpark">
@@ -96,11 +131,6 @@
   <section id="events">
     <h2>Events</h2>
     <p>Wir veranstalten regelmäßig gemeinsame Fahrten, Convoys und Community-Events – von entspannten Touren bis hin zu offiziellen Konvois mit anderen Speditionen.</p>
-  </section>
-
-  <section id="team">
-    <h2>Das Team</h2>
-    <p>Unser Team besteht aus erfahrenen Fahrern und Organisatoren, die gemeinsam den Betrieb der Spedition ermöglichen. Fahrerlisten anderer Speditionen (RSL, FIR Network) sind bewusst nicht enthalten.</p>
   </section>
 
   <section id="bewerbung">
