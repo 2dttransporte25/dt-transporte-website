@@ -3,37 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unsere Fahrer – D&T Transporte</title>
+  <title>Unsere Fahrer - D&T Transporte</title>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Rajdhani', sans-serif;
-      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgba(0, 0, 0, 0.85);
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+
+    header img {
+      width: 120px;
+      filter: drop-shadow(0 0 5px white);
+      margin-bottom: 1rem;
     }
 
     header h1 {
+      font-size: 3rem;
       color: #00e6e6;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     main {
       background-color: rgba(0, 0, 0, 0.7);
+      padding: 3rem 2rem;
       max-width: 800px;
       margin: 3rem auto;
-      padding: 2rem;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
     }
 
     h2 {
@@ -44,21 +60,29 @@
       margin-bottom: 1.5rem;
     }
 
-    .drivers-list {
-      margin-top: 2rem;
-    }
-
-    .driver {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-      border-radius: 10px;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
       margin-bottom: 1rem;
     }
 
-    .driver-name {
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
       font-size: 1.2rem;
+      background: linear-gradient(to right, #00e6e6, #00b3b3);
+      color: black;
       font-weight: bold;
-      color: #00e6e6;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      margin-top: 2rem;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #00ffff, #00cccc);
     }
 
     footer {
@@ -83,25 +107,20 @@
 </head>
 <body>
   <header>
-    <h1>Unsere Fahrer</h1>
+    <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
+    <h1>Unsere Fahrer - D&T Transporte</h1>
+    <p>Unsere talentierten Fahrer in der Community</p>
   </header>
-
   <main>
-    <section class="drivers-list">
-      <h2>Fahrerauflistung</h2>
-      <div class="driver">
-        <span class="driver-name">Max Mustermann</span>
-        <p>Fahrzeug: Scania R</p>
-        <p>Fahrstunden: 1500+</p>
-        <p>Discord: MaxMustermann#1234</p>
-      </div>
-      <div class="driver">
-        <span class="driver-name">John Doe</span>
-        <p>Fahrzeug: MAN TGX</p>
-        <p>Fahrstunden: 1200+</p>
-        <p>Discord: JohnDoe#5678</p>
-      </div>
-      <!-- Weitere Fahrer können hier hinzugefügt werden -->
+    <section>
+      <h2>Unsere Fahrer</h2>
+      <p>Hier listen wir alle Fahrer auf, die ein Teil von D&T Transporte sind. Gemeinsam rollen wir die Straßen!</p>
+      
+      <!-- Hier können die Fahrer aufgelistet werden -->
+      <p><strong>Fahrer 1:</strong> Max Mustermann</p>
+      <p><strong>Fahrer 2:</strong> Erika Mustermann</p>
+      
+      <a href="index.html" class="btn">Zurück zur Hauptseite</a>
     </section>
   </main>
 
