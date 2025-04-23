@@ -4,172 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D&T Transporte</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0d1117;
-      color: white;
-    }
-    header {
-      background-color: #1f2937;
-      padding: 2rem;
-      text-align: center;
-    }
-    header img {
-      height: 100px;
-      margin-bottom: 1rem;
-    }
-    nav {
-      background-color: #111827;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
-    nav .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    nav .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #1f2937;
-      min-width: 160px;
-      z-index: 1;
-      top: 100%;
-      left: 0;
-    }
-    nav .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    nav .dropdown-content a {
-      display: block;
-      padding: 0.5rem;
-      color: white;
-      text-align: left;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #1f2937;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.5rem;
-      border-radius: 5px;
-      border: none;
-      background-color: #111;
-      color: white;
-    }
-    button {
-      background-color: white;
-      color: black;
-      padding: 0.5rem;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-  </style>
+  <!-- Hier können CSS-Links und andere Meta-Tags eingefügt werden -->
 </head>
 <body>
-  <header>
-    <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
-    <h1>D&T Transporte</h1>
-    <p>Willkommen bei unserer virtuellen Spedition!</p>
-  </header>
+  <!-- Navigation -->
   <nav>
-    <a href="#ueber">Startseite</a>
-    <a href="#fuhrpark">Fuhrpark</a>
-    <a href="#events">Events</a>
-    <div class="dropdown">
-      <a href="#">Über uns</a>
-      <div class="dropdown-content">
-        <a href="#ueber">Unser Leitbild</a>
-        <a href="#team">Team</a>
-      </div>
-    </div>
-    <a href="#bewerbung">Bewerbung</a>
-    <a href="#kontakt">Kontakt</a>
+    <ul>
+      <li><a href="#startseite">Startseite</a></li>
+      <li><a href="#ueber-uns">Über uns</a></li>
+      <li><a href="#fuhrpark">Fuhrpark</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#team">Das Team</a></li>
+      <li><a href="#bewerbung">Bewerbung</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
   </nav>
 
-  <section id="ueber">
-    <h2>Unser Leitbild</h2>
-    <p>D&T Transporte ist eine aktive virtuelle Spedition, die sich auf gemeinsame Fahrten in Euro Truck Simulator 2 und American Truck Simulator spezialisiert. Wir bieten eine strukturierte Community, regelmäßige Touren und viel Spaß auf der Straße.</p>
+  <!-- Startseite -->
+  <section id="startseite">
+    <h1>Willkommen bei D&T Transporte</h1>
+    <p>Ihre virtuelle Spedition für Euro Truck Simulator 2 und American Truck Simulator.</p>
   </section>
 
-  <section id="team">
-    <h2>Das Team</h2>
-    <p>Unser Team besteht aus erfahrenen Fahrern und Organisatoren, die gemeinsam den Betrieb der Spedition ermöglichen. Fahrerlisten anderer Speditionen (RSL, FIR Network) sind bewusst nicht enthalten.</p>
+  <!-- Über uns -->
+  <section id="ueber-uns">
+    <h2>Über uns</h2>
+    <p>D&T Transporte ist eine engagierte virtuelle Spedition mit Fokus auf Gemeinschaft und Professionalität.</p>
   </section>
 
+  <!-- Fuhrpark -->
   <section id="fuhrpark">
     <h2>Fuhrpark</h2>
-    <p>Unser Fuhrpark umfasst verschiedene Sattelzugmaschinen aller großen Marken, angepasst auf die Wünsche und den Fahrstil unserer Fahrer.</p>
+    <p>Unser moderner Fuhrpark umfasst verschiedene Fahrzeuge für jede Transportanforderung.</p>
   </section>
 
+  <!-- Events -->
   <section id="events">
     <h2>Events</h2>
-    <p>Wir veranstalten regelmäßig gemeinsame Fahrten, Convoys und Community-Events – von entspannten Touren bis hin zu offiziellen Konvois mit anderen Speditionen.</p>
+    <p>Regelmäßige Konvois und Veranstaltungen stärken unseren Teamgeist und bieten Abwechslung.</p>
   </section>
 
+  <!-- Das Team -->
+  <section id="team">
+    <h2>Das Team</h2>
+    <p>Unser Team besteht aus erfahrenen Fahrern und engagierten Mitgliedern, die gemeinsam zum Erfolg beitragen.</p>
+  </section>
+
+  <!-- Bewerbung -->
   <section id="bewerbung">
-    <h2>Bewerbungsformular</h2>
-    <form action="https://formspree.io/f/xgvkellv" method="POST">
-      <label for="name">Name</label>
+    <h2>Bewerbung</h2>
+    <form action="mailto:info.darsperspedition@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="age">Alter</label>
-      <input type="number" id="age" name="age" required>
+      <label for="alter">Alter:</label>
+      <input type="number" id="alter" name="alter" required>
 
-      <label for="hours">Spielstunden (ETS2/ATS)</label>
-      <input type="number" id="hours" name="hours" required>
+      <label for="spielstunden">Spielstunden (ETS2/ATS):</label>
+      <input type="number" id="spielstunden" name="spielstunden" required>
 
-      <label for="discord">Discord-Name</label>
+      <label for="discord">Discord-Name:</label>
       <input type="text" id="discord" name="discord" required>
 
-      <label for="email">E-Mail-Adresse</label>
+      <label for="email">E-Mail-Adresse:</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="message">Nachricht</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <label for="nachricht">Nachricht:</label>
+      <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
 
-      <button type="submit">Absenden</button>
+      <button type="submit">Bewerbung absenden</button>
     </form>
   </section>
 
+  <!-- Kontakt -->
   <section id="kontakt">
-    <h2>Kontakt & Adresse</h2>
-    <p><strong>E-Mail:</strong> <a href="mailto:info.darsperspedition@gmail.com">info.darsperspedition@gmail.com</a></p>
-    <p><strong>Adresse:</strong> D&T Transporte, Virtuelle Spedition, Deutschland</p>
+    <h2>Kontakt</h2>
+    <p>E-Mail: <a href="mailto:info.darsperspedition@gmail.com">info.darsperspedition@gmail.com</a></p>
+    <p>Adresse: D&T Transporte, Musterstraße 1, 12345 Musterstadt</p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>
-      <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
-      <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a>
-    </p>
-    <p>&copy; 2025 D&T Transporte</p>
+    <p>&copy; 2025 D&T Transporte. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>
