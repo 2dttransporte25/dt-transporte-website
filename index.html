@@ -1,69 +1,126 @@
-<!-- index.html (Startseite) -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D&T Transporte | Virtuelle Spedition</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>D&T Transporte</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("D&T Transporte Bild.jpg") no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      padding: 2rem;
+    }
+    header img {
+      width: 150px;
+      filter: grayscale(100%);
+      margin-bottom: 1rem;
+    }
+    main {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      max-width: 600px;
+      margin: 2rem auto;
+      border-radius: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-top: 0.3rem;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #111;
+      color: white;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.7rem;
+      font-size: 1rem;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: white;
+    }
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="D&T Transporte Logo" class="logo">
-      <div class="headline">
-        <h1>D&T Transporte</h1>
-        <p>Präzision. Leidenschaft. Gemeinschaft.</p>
-      </div>
-    </div>
+    <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
+    <h1>D&T Transporte</h1>
+    <p>Willkommen bei unserer virtuellen Spedition!</p>
   </header>
-  <nav class="main-nav">
-    <ul>
-      <li><a href="index.html" class="active">Startseite</a></li>
-      <li><a href="ueber-uns.html">Über uns</a></li>
-      <li><a href="fuhrpark.html">Fuhrpark</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="bewerbung.html">Bewerbung</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h2>Willkommen bei D&T Transporte</h2>
-        <p>Wir stehen für Qualität, Zusammenhalt und ein modernes Speditionsmanagement in der virtuellen Welt von ETS2 und ATS.</p>
-        <a href="bewerbung.html" class="btn-primary">Jetzt bewerben</a>
-      </div>
+    <section>
+      <h2>Wer wir sind</h2>
+      <p>
+        D&T Transporte ist eine engagierte virtuelle Spedition im TruckersMP-Universum. Unser Ziel ist es, eine freundliche und professionelle Community rund um Euro Truck Simulator 2 und American Truck Simulator zu schaffen. 
+        Ob entspannte Touren oder große Convoys – bei uns steht der Spaß am gemeinsamen Fahren im Vordergrund.
+      </p>
+      <p>
+        Wir bieten regelmäßige Events, ein strukturiertes Rangsystem und ein aktives Discord, wo sich Fahrer austauschen und organisieren können. Egal ob Anfänger oder erfahrener Trucker – bei uns ist jeder willkommen!
+      </p>
+      <p>
+        Unsere Touren werden transparent über <strong>Trucky</strong>, <strong>TrucksBook</strong> und <strong>SpedV</strong> erfasst – so behalten alle den Überblick über ihre Leistungen und den Fortschritt.
+      </p>
     </section>
 
-    <section class="intro">
-      <h2>Was uns besonders macht</h2>
-      <div class="features">
-        <div class="feature-box">
-          <h3>Professionelle Struktur</h3>
-          <p>Wir organisieren unsere Fahrten über Trucky, TrucksBook und SpedV – für maximale Übersicht und Nachvollziehbarkeit.</p>
-        </div>
-        <div class="feature-box">
-          <h3>Starke Community</h3>
-          <p>In unserer Discord-Community sind Fahrerfreundschaft, Humor und gegenseitige Hilfe selbstverständlich.</p>
-        </div>
-        <div class="feature-box">
-          <h3>Regelmäßige Events</h3>
-          <p>Wöchentliche Convoys, spontane Touren oder große VTC-Kooperationen – Langeweile kommt bei uns nicht auf.</p>
-        </div>
-      </div>
-    </section>
+    <h2>Bewerbungsformular</h2>
+    <form action="https://formspree.io/f/xgvkellv" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Alter</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="hours">Spielstunden (ETS2/ATS)</label>
+      <input type="number" id="hours" name="hours" required>
+
+      <label for="discord">Discord-Name</label>
+      <input type="text" id="discord" name="discord" placeholder="z. B. MaxMustermann#1234" required>
+
+      <label for="email">E-Mail-Adresse</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Nachricht</label>
+      <textarea id="message" name="message" rows="4" placeholder="Deine Nachricht oder Anmerkung" required></textarea>
+
+      <p><em>Hinweis: Die Nutzung von Trucky, TrucksBook oder SpedV ist zur Abrechnung erforderlich.</em></p>
+
+      <button type="submit">Bewerbung absenden</button>
+    </form>
+
+    <footer>
+      <p>
+        <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
+        <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a>
+      </p>
+    </footer>
   </main>
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 D&T Transporte – Virtuelle Spedition</p>
-      <p><a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP</a> | <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord</a></p>
-      <p><a href="kontakt.html">Kontakt & Impressum</a></p>
-    </div>
-  </footer>
 </body>
 </html>
+
