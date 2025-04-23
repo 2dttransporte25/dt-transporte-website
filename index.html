@@ -7,67 +7,64 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: url("D&T Transporte Bild.jpg") no-repeat center center fixed;
-      background-size: cover;
       margin: 0;
       padding: 0;
+      background: #0d1117;
       color: white;
     }
     header {
-      background-color: rgba(0, 0, 0, 0.8);
-      text-align: center;
+      background-color: #1f2937;
       padding: 2rem;
+      text-align: center;
     }
     header img {
-      width: 150px;
-      filter: grayscale(100%);
+      height: 100px;
       margin-bottom: 1rem;
     }
-    main {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      max-width: 800px;
-      margin: 2rem auto;
-      border-radius: 10px;
+    nav {
+      background-color: #111827;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
     section {
-      margin-bottom: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #1f2937;
     }
     form {
       display: flex;
       flex-direction: column;
-    }
-    label {
-      margin-top: 1rem;
-      font-weight: bold;
+      gap: 1rem;
     }
     input, textarea {
       padding: 0.5rem;
-      font-size: 1rem;
-      margin-top: 0.3rem;
-      border: 1px solid #444;
       border-radius: 5px;
+      border: none;
       background-color: #111;
       color: white;
     }
     button {
-      margin-top: 2rem;
-      padding: 0.7rem;
-      font-size: 1rem;
       background-color: white;
       color: black;
-      border: none;
+      padding: 0.5rem;
       border-radius: 5px;
+      border: none;
       cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      color: white;
-    }
-    a {
-      color: white;
-      text-decoration: underline;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -77,21 +74,36 @@
     <h1>D&T Transporte</h1>
     <p>Willkommen bei unserer virtuellen Spedition!</p>
   </header>
-  <main>
-    <section>
-      <h2>Wer wir sind</h2>
-      <p>
-        D&T Transporte ist eine engagierte virtuelle Spedition im TruckersMP-Universum. Unser Ziel ist es, eine freundliche und professionelle Community rund um Euro Truck Simulator 2 und American Truck Simulator zu schaffen. 
-        Ob entspannte Touren oder große Convoys – bei uns steht der Spaß am gemeinsamen Fahren im Vordergrund.
-      </p>
-      <p>
-        Wir bieten regelmäßige Events, ein strukturiertes Rangsystem und ein aktives Discord, wo sich Fahrer austauschen und organisieren können. Egal ob Anfänger oder erfahrener Trucker – bei uns ist jeder willkommen!
-      </p>
-      <p>
-        Unsere Touren werden transparent über <strong>Trucky</strong>, <strong>TrucksBook</strong> und <strong>SpedV</strong> erfasst – so behalten alle den Überblick über ihre Leistungen und den Fortschritt.
-      </p>
-    </section>
+  <nav>
+    <a href="#ueber">Über uns</a>
+    <a href="#fuhrpark">Fuhrpark</a>
+    <a href="#events">Events</a>
+    <a href="#team">Team</a>
+    <a href="#bewerbung">Bewerbung</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
 
+  <section id="ueber">
+    <h2>Über uns</h2>
+    <p>D&T Transporte ist eine aktive virtuelle Spedition, die sich auf gemeinsame Fahrten in Euro Truck Simulator 2 und American Truck Simulator spezialisiert. Wir bieten eine strukturierte Community, regelmäßige Touren und viel Spaß auf der Straße.</p>
+  </section>
+
+  <section id="fuhrpark">
+    <h2>Fuhrpark</h2>
+    <p>Unser Fuhrpark umfasst verschiedene Sattelzugmaschinen aller großen Marken, angepasst auf die Wünsche und den Fahrstil unserer Fahrer.</p>
+  </section>
+
+  <section id="events">
+    <h2>Events</h2>
+    <p>Wir veranstalten regelmäßig gemeinsame Fahrten, Convoys und Community-Events – von entspannten Touren bis hin zu offiziellen Konvois mit anderen Speditionen.</p>
+  </section>
+
+  <section id="team">
+    <h2>Das Team</h2>
+    <p>Unser Team besteht aus erfahrenen Fahrern und Organisatoren, die gemeinsam den Betrieb der Spedition ermöglichen. Fahrerlisten anderer Speditionen (RSL, FIR Network) sind bewusst nicht enthalten.</p>
+  </section>
+
+  <section id="bewerbung">
     <h2>Bewerbungsformular</h2>
     <form action="https://formspree.io/f/xgvkellv" method="POST">
       <label for="name">Name</label>
@@ -104,34 +116,30 @@
       <input type="number" id="hours" name="hours" required>
 
       <label for="discord">Discord-Name</label>
-      <input type="text" id="discord" name="discord" placeholder="z. B. MaxMustermann#1234" required>
+      <input type="text" id="discord" name="discord" required>
 
       <label for="email">E-Mail-Adresse</label>
       <input type="email" id="email" name="email" required>
 
       <label for="message">Nachricht</label>
-      <textarea id="message" name="message" rows="4" placeholder="Deine Nachricht oder Anmerkung" required></textarea>
+      <textarea id="message" name="message" rows="4" required></textarea>
 
-      <p><em>Hinweis: Die Nutzung von Trucky, TrucksBook oder SpedV ist zur Abrechnung erforderlich.</em></p>
-
-      <button type="submit">Bewerbung absenden</button>
+      <button type="submit">Absenden</button>
     </form>
+  </section>
 
-    <section>
-      <h2>Kontakt & Adresse</h2>
-      <p>Bei Fragen oder Anliegen erreichst du uns unter:</p>
-      <p><strong>E-Mail:</strong> <a href="mailto:info.darsperspedition@gmail.com">info.darsperspedition@gmail.com</a></p>
-      <p><strong>Adresse:</strong> D&T Transporte, Virtuelle Spedition, Deutschland</p>
-    </section>
+  <section id="kontakt">
+    <h2>Kontakt & Adresse</h2>
+    <p><strong>E-Mail:</strong> <a href="mailto:info.darsperspedition@gmail.com">info.darsperspedition@gmail.com</a></p>
+    <p><strong>Adresse:</strong> D&T Transporte, Virtuelle Spedition, Deutschland</p>
+  </section>
 
-    <footer>
-      <p>
-        <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
-        <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a>
-      </p>
-    </footer>
-  </main>
+  <footer>
+    <p>
+      <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
+      <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a>
+    </p>
+    <p>&copy; 2025 D&T Transporte</p>
+  </footer>
 </body>
 </html>
-
-
