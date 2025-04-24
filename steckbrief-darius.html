@@ -4,36 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Steckbrief – Darius | D&T Transporte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f3f4f6;
-      color: #1f2937;
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,1)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
       padding: 2rem;
     }
+
     .steckbrief {
-      max-width: 600px;
+      max-width: 800px;
       margin: 0 auto;
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
     }
+
     h1 {
-      color: #1e40af;
+      font-size: 2.5rem;
+      color: #00e6e6;
+      text-align: center;
+      margin-bottom: 2rem;
     }
+
     .item {
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.2rem;
     }
+
     .label {
       font-weight: bold;
-      color: #374151;
+      color: #00e6e6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, #00e6e6, #00b3b3);
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #00ffff, #00cccc);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2.5rem;
+      color: #00e6e6;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #00ffff;
     }
   </style>
 </head>
 <body>
   <div class="steckbrief">
-    <h1>🚛 Steckbrief – Darius | D&T Transporte</h1>
+    <h1>🚛 Steckbrief – Darius</h1>
     <div class="item"><span class="label">Name:</span> Darius</div>
     <div class="item"><span class="label">Alter:</span> 15 Jahre</div>
     <div class="item"><span class="label">Position:</span> Inhaber & IT-Experte</div>
@@ -43,6 +89,7 @@
     <div class="item"><span class="label">Stärken:</span> Technikverständnis, Organisation, Flexibilität, Leidenschaft für Logistik</div>
     <div class="item"><span class="label">Motto:</span> „Ich bring nicht nur die Ladung ans Ziel – ich bring das ganze Unternehmen nach vorn.“</div>
     <div class="item"><span class="label">Warum D&T?</span> Weil man mit Vision, Drive und digitalem Know-how richtig was bewegen kann.</div>
+    <a class="back-link" href="fahrer.html">&#8592; Zurück zur Fahrerliste</a>
   </div>
 </body>
 </html>
