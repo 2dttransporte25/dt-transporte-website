@@ -66,24 +66,24 @@
       margin-bottom: 1rem;
     }
 
+    /* Button Styling */
     .btn {
       display: inline-block;
       padding: 1rem 2rem;
-      font-size: 1.2rem;
-      background: linear-gradient(to right, #00e6e6, #00b3b3);
+      font-size: 1.1rem;
+      background: #00e6e6;
       color: black;
-      font-weight: bold;
+      font-weight: normal;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       text-decoration: none;
+      margin: 1rem 0.5rem;
       transition: background 0.3s ease;
-      margin-top: 2rem;
-      margin-right: 1rem;
     }
 
     .btn:hover {
-      background: linear-gradient(to right, #00ffff, #00cccc);
+      background: #00b3b3;
     }
 
     footer {
@@ -108,14 +108,28 @@
     .footer-btns a {
       margin-left: 1rem;
     }
+
+    .back-link {
+      color: #00e6e6;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #00ffff;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
+    <a href="index.html"><img src="Logo D&T Transporte.png" alt="D&T Transporte Logo"></a> <!-- Link zum Logo, führt zur Hauptseite -->
     <h1>D&T Transporte</h1>
     <p>Willkommen bei unserer virtuellen Spedition – Gemeinsam rollen wir voran!</p>
   </header>
+
   <main>
     <section>
       <h2>Wer wir sind</h2>
@@ -126,10 +140,10 @@
         Unser Motto: <strong>Realität trifft Gemeinschaft</strong> – wir legen Wert auf Fahrspaß, Zusammenhalt und eine aktive Community mit klaren Strukturen und Events.
       </p>
       <p>
-        Mit Tools wie <strong>Trucky</strong>, <strong>TrucksBook</strong> und <strong>SpedV</strong> hast du deinen Fortschritt immer im Blick. Unsere Fahrten sind transparent dokumentiert und motivieren zum Mitmachen.
+        Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> hast du deinen Fortschritt immer im Blick. Unsere Fahrten sind transparent dokumentiert und motivieren zum Mitmachen.
       </p>
 
-      <!-- Buttons hinzugefügt -->
+      <!-- Buttons direkt unter der Willkommensnachricht -->
       <a href="ueber-uns.html" class="btn">Über uns</a>
       <a href="fahrer.html" class="btn">Unsere Fahrer</a>
       <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
@@ -139,10 +153,12 @@
 
   <footer>
     <div class="footer-btns">
+      <a href="index.html">Zurück zur Startseite</a> |
       <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
       <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a> |
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
+    <a class="back-link" href="index.html">&#8592; Zurück zur Hauptseite</a>
   </footer>
 </body>
 </html>
