@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuhrpark - D&T Transporte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      text-align: center;
+      padding: 3rem 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00e6e6;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    main {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 3rem auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #00e6e6;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .truck-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .truck-card {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,255,255,0.15);
+      text-align: center;
+    }
+
+    .truck-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 8px rgba(0,255,255,0.3);
+    }
+
+    .truck-card h3 {
+      color: #00ffff;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .truck-card p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
+      color: #00e6e6;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #00ffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Unser Fuhrpark</h1>
+    <p>Moderne Maschinen für jeden Auftrag – das ist D&T Transporte</p>
+  </header>
+  <main>
+    <h2>Unsere Fahrzeuge</h2>
+    <div class="truck-list">
+      <div class="truck-card">
+        <img src="truck1.jpg" alt="Scania R NextGen">
+        <h3>Scania R NextGen</h3>
+        <p>Stark, zuverlässig und mit individueller D&T Lackierung – der König der Autobahn.</p>
+      </div>
+      <div class="truck-card">
+        <img src="truck2.jpg" alt="MAN TGX 2020">
+        <h3>MAN TGX 2020</h3>
+        <p>Ideal für lange Strecken – komfortabel, effizient und immer bereit für große Aufträge.</p>
+      </div>
+      <div class="truck-card">
+        <img src="truck3.jpg" alt="Mercedes-Benz Actros">
+        <h3>Mercedes-Benz Actros</h3>
+        <p>Technologisch fortschrittlich und ein echter Blickfang auf der Straße.</p>
+      </div>
+    </div>
+    <a class="back-link" href="index.html">&#8592; Zurück zur Startseite</a>
+  </main>
+  <footer>
+    <p>
+      <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
+      <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a>
+    </p>
+  </footer>
+</body>
+</html>
