@@ -66,6 +66,7 @@
       margin-bottom: 1rem;
     }
 
+    /* Buttons Styling */
     .btn {
       display: inline-block;
       padding: 1rem 2rem;
@@ -84,6 +85,16 @@
 
     .btn:hover {
       background: linear-gradient(to right, #00ffff, #00cccc);
+    }
+
+    /* Additional button styling for hover effect and color scheme */
+    .btn-main {
+      background: linear-gradient(to right, #ff7f00, #ff6f00);
+      color: white;
+    }
+
+    .btn-main:hover {
+      background: linear-gradient(to right, #ff6600, #ff4500);
     }
 
     footer {
@@ -108,14 +119,28 @@
     .footer-btns a {
       margin-left: 1rem;
     }
+
+    .back-link {
+      color: #00e6e6;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #00ffff;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
+    <a href="index.html"><img src="Logo D&T Transporte.png" alt="D&T Transporte Logo"></a> <!-- Link zum Logo, führt zur Hauptseite -->
     <h1>D&T Transporte</h1>
     <p>Willkommen bei unserer virtuellen Spedition – Gemeinsam rollen wir voran!</p>
   </header>
+
   <main>
     <section>
       <h2>Wer wir sind</h2>
@@ -129,20 +154,22 @@
         Mit Tools wie <strong>Trucky</strong>, <strong>TrucksBook</strong> und <strong>SpedV</strong> hast du deinen Fortschritt immer im Blick. Unsere Fahrten sind transparent dokumentiert und motivieren zum Mitmachen.
       </p>
 
-      <!-- Buttons hinzugefügt -->
+      <!-- Buttons hinzugefügt, die dem Stil der Buttons auf https://v-spedition.de/ ähneln -->
       <a href="ueber-uns.html" class="btn">Über uns</a>
       <a href="fahrer.html" class="btn">Unsere Fahrer</a>
       <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
-      <a href="fuhrpark.html" class="btn">Unser Fuhrpark</a>
+      <a href="fuhrpark.html" class="btn btn-main">Unser Fuhrpark</a>
     </section>
   </main>
 
   <footer>
     <div class="footer-btns">
+      <a href="index.html">Zurück zur Startseite</a> |
       <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
       <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a> |
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
+    <a class="back-link" href="index.html">&#8592; Zurück zur Hauptseite</a>
   </footer>
 </body>
 </html>
