@@ -46,7 +46,7 @@
     main {
       background-color: rgba(0, 0, 0, 0.7);
       padding: 3rem 2rem;
-      max-width: 800px;
+      max-width: 1200px;
       margin: 3rem auto;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0,255,255,0.2);
@@ -60,23 +60,29 @@
       margin-bottom: 1.5rem;
     }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .driver-images {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
       margin-top: 2rem;
     }
 
-    .driver-images img {
-      width: 100%;
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
     }
 
     footer {
@@ -120,46 +126,26 @@
   <header>
     <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
     <h1>Unser Fuhrpark</h1>
-    <p>Hier zählt Individualität – doch bei Events zeigen wir Einheit!</p>
+    <p>Hier präsentieren wir die LKWs unserer Fahrer.</p>
   </header>
 
   <main>
-    <section>
-      <h2>Freiheit mit Stil – unser Fuhrpark</h2>
-      <p>
-        Unser Fuhrpark steht für <strong>Markenvielfalt</strong> und <strong>individuelle Freiheit</strong>. Jeder Fahrer darf bei <strong>D&T Transporte</strong> den LKW fahren, den er am liebsten mag – ganz ohne technische Vorschriften oder Markenbindung.
-      </p>
-      <p>
-        Ob <em>Scania, Volvo, MAN, Mercedes, DAF, Renault oder Iveco</em> – bei uns ist alles willkommen, was den Highway rockt!
-      </p>
-      <p>
-        Die einzige Pflicht: <strong>Bei offiziellen Convoys und Events tragen alle Fahrer unsere einheitliche Firmenlackierung</strong>, um gemeinsam professionell aufzutreten.
-      </p>
-      <p>
-        Ansonsten gilt: <strong>Gestalte deinen Truck so individuell wie du willst</strong> – Fahrspaß, Wiedererkennungswert und dein persönlicher Stil stehen im Vordergrund.
-      </p>
-
-      <!-- Hier fügen wir die Bilder der Fahrer und ihrer Trucks ein -->
-      <div class="driver-images">
-        <div class="driver">
-          <img src="fahrer1.jpg" alt="Fahrer 1">
-          <p>Fahrer 1 – Scania</p>
-        </div>
-        <div class="driver">
-          <img src="fahrer2.jpg" alt="Fahrer 2">
-          <p>Fahrer 2 – Volvo</p>
-        </div>
-        <div class="driver">
-          <img src="fahrer3.jpg" alt="Fahrer 3">
-          <p>Fahrer 3 – MAN</p>
-        </div>
-        <div class="driver">
-          <img src="fahrer4.jpg" alt="Fahrer 4">
-          <p>Fahrer 4 – Mercedes</p>
-        </div>
-        <!-- Fügen Sie weitere Fahrerbilder nach Bedarf hinzu -->
+    <!-- Bildergalerie -->
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="fahrer1.jpg" alt="Fahrer 1 – Scania">
       </div>
-    </section>
+      <div class="gallery-item">
+        <img src="fahrer2.jpg" alt="Fahrer 2 – Volvo">
+      </div>
+      <div class="gallery-item">
+        <img src="fahrer3.jpg" alt="Fahrer 3 – MAN">
+      </div>
+      <div class="gallery-item">
+        <img src="fahrer4.jpg" alt="Fahrer 4 – Mercedes">
+      </div>
+      <!-- Weitere Bilder hier einfügen -->
+    </div>
 
     <!-- Der "Zurück zur Hauptseite" Link wird hier unten hinzugefügt -->
     <a class="back-link" href="index.html">&#8592; Zurück zur Hauptseite</a>
