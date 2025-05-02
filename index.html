@@ -2,37 +2,33 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D&T Transporte</title>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
+    body {
       font-family: 'Rajdhani', sans-serif;
-      background-color: #000;
-      color: #fff;
-      scroll-behavior: smooth;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
     }
 
     header {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
-                  url("D&T Transporte Bild.jpg") no-repeat center center;
-      background-size: cover;
+      background-color: rgba(0, 0, 0, 0.85);
       text-align: center;
-      padding: 3rem 1rem;
-      box-shadow: 0 4px 20px rgba(0, 230, 230, 0.15);
-      animation: fadeIn 1.2s ease-in-out;
+      padding: 3rem 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     }
 
-    header img {
-      width: 110px;
-      filter: drop-shadow(0 0 8px #00e6e6);
+    header img.logo {
+      width: 120px;
+      filter: drop-shadow(0 0 5px white);
       margin-bottom: 1rem;
     }
 
@@ -43,143 +39,134 @@
     }
 
     header p {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: #ccc;
     }
 
+    .truck-image {
+      margin-top: 2rem;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,230,230,0.25);
+    }
+
     main {
-      max-width: 900px;
-      margin: 3rem auto;
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 3rem 2rem;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 18px;
-      box-shadow: 0 0 30px rgba(0, 230, 230, 0.08);
-      animation: slideIn 1.5s ease-out;
+      max-width: 800px;
+      margin: 3rem auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
     }
 
     h2 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: #00e6e6;
-      margin-bottom: 1.5rem;
       border-bottom: 2px solid #00e6e6;
       padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
     }
 
     p {
-      font-size: 1.15rem;
-      color: #eee;
-      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background: #00e6e6;
+      color: black;
+      font-weight: normal;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      margin: 1rem 0.5rem;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #00b3b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.8);
+      margin-top: 3rem;
+      font-size: 0.95rem;
     }
 
     a {
       color: #00e6e6;
       text-decoration: none;
-      transition: all 0.3s ease;
     }
 
     a:hover {
-      color: #00ffff;
       text-decoration: underline;
-    }
-
-    .btn-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .btn {
-      flex: 1 1 200px;
-      text-align: center;
-      padding: 1rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #00e6e6, #00b3b3);
-      color: #000;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 5px 15px rgba(0, 230, 230, 0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0, 230, 230, 0.5);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: rgba(0, 0, 0, 0.85);
-      font-size: 0.95rem;
-      margin-top: 4rem;
-    }
-
-    .footer-links a {
-      margin: 0 0.75rem;
-      color: #00e6e6;
-    }
-
-    .footer-links a:hover {
       color: #00ffff;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: scale(0.98); }
-      100% { opacity: 1; transform: scale(1); }
+    .footer-btns a {
+      margin-left: 1rem;
     }
 
-    @keyframes slideIn {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .back-link {
+      color: #00e6e6;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      display: inline-block;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      .btn-grid {
-        flex-direction: column;
-      }
+    .back-link:hover {
+      text-decoration: underline;
+      color: #00ffff;
     }
   </style>
 </head>
 <body>
-
   <header>
     <a href="index.html">
-      <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
+      <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo" class="logo">
     </a>
     <h1>D&T Transporte</h1>
     <p>Willkommen bei unserer virtuellen Spedition – Gemeinsam rollen wir voran!</p>
+
+    <!-- Eingefügtes Bild unter dem Logo -->
+    <img src="d&t.png" alt="Unsere Scania Trucks" class="truck-image">
   </header>
 
   <main>
     <section>
       <h2>Wer wir sind</h2>
-      <p><strong>D&T Transporte</strong> ist eine engagierte virtuelle Spedition, aktiv im Multiplayer-Modus von <em>Euro Truck Simulator 2</em> und <em>American Truck Simulator</em> über <strong>TruckersMP</strong>, ebenso wie im entspannten Einzelspieler-Modus.</p>
-      <p>Du entscheidest selbst: Multiplayer-Herausforderungen im Team oder entspannte Solo-Fahrten. Unser Motto: <strong>Freiheit auf der Straße – gemeinsam oder allein.</strong></p>
-      <p>Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> behältst du jederzeit den Überblick über deine Fahrten – egal wie du unterwegs bist.</p>
+      <p>
+        <strong>D&T Transporte</strong> ist eine leidenschaftliche virtuelle Spedition, die sich sowohl auf den Multiplayer von <em>Euro Truck Simulator 2</em> und <em>American Truck Simulator</em> im <strong>TruckersMP (TMP)</strong> konzentriert, als auch Solo-Fahrten in einer entspannten Atmosphäre fördert.
+      </p>
+      <p>
+        Jeder Fahrer entscheidet selbst, ob er die Herausforderung im Multiplayer sucht oder lieber alleine fährt. Bei uns ist beides möglich – du kannst dich jederzeit für den Weg entscheiden, der dir am meisten Spaß macht. Unser Motto lautet: <strong>Freiheit auf der Straße, sei es im Team oder solo.</strong>
+      </p>
+      <p>
+        Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> kannst du deinen Fortschritt stets verfolgen und deine Fahrten dokumentieren, egal ob du alleine oder im TMP-Modus unterwegs bist.
+      </p>
 
-      <div class="btn-grid">
-        <a href="ueber-uns.html" class="btn">Über uns</a>
-        <a href="fahrer.html" class="btn">Unsere Fahrer</a>
-        <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
-        <a href="fuhrpark.html" class="btn">Unser Fuhrpark</a>
-      </div>
+      <a href="ueber-uns.html" class="btn">Über uns</a>
+      <a href="fahrer.html" class="btn">Unsere Fahrer</a>
+      <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
+      <a href="fuhrpark.html" class="btn">Unser Fuhrpark</a>
     </section>
   </main>
 
   <footer>
-    <div class="footer-links">
+    <div class="footer-btns">      
       <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
       <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a> |
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
   </footer>
-
 </body>
 </html>
