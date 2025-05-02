@@ -6,31 +6,33 @@
   <title>D&T Transporte</title>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Grundstil zurücksetzen */
-    * {
+    /* Basis Reset */
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Rajdhani', sans-serif;
-      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
+      background: linear-gradient(120deg, #000 0%, #111 100%), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
       background-size: cover;
       color: #fff;
-      line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
       text-align: center;
-      padding: 3rem 2rem;
-      background-color: rgba(0, 0, 0, 0.85);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      padding: 3rem 1rem;
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 4px 20px rgba(0, 230, 230, 0.15);
+      animation: fadeIn 1.2s ease-in-out;
     }
 
     header img {
-      width: 120px;
-      filter: drop-shadow(0 0 5px white);
+      width: 110px;
+      filter: drop-shadow(0 0 8px #00e6e6);
       margin-bottom: 1rem;
     }
 
@@ -38,10 +40,11 @@
       font-size: 3rem;
       color: #00e6e6;
       margin-bottom: 0.5rem;
+      letter-spacing: 1px;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: #ccc;
     }
 
@@ -49,28 +52,32 @@
       max-width: 900px;
       margin: 3rem auto;
       padding: 3rem 2rem;
-      background-color: rgba(0, 0, 0, 0.75);
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 230, 230, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      box-shadow: 0 0 30px rgba(0, 230, 230, 0.08);
+      animation: slideIn 1.5s ease-out;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #00e6e6;
-      border-bottom: 2px solid #00e6e6;
       margin-bottom: 1.5rem;
+      border-bottom: 2px solid #00e6e6;
       padding-bottom: 0.5rem;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      color: #eee;
       margin-bottom: 1.2rem;
     }
 
     a {
       color: #00e6e6;
       text-decoration: none;
-      transition: color 0.3s;
+      transition: all 0.3s ease;
     }
 
     a:hover {
@@ -78,42 +85,67 @@
       text-decoration: underline;
     }
 
+    .btn-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
     .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      margin: 0.75rem 0.5rem 0 0;
+      flex: 1 1 200px;
+      text-align: center;
+      padding: 1rem;
       font-size: 1.1rem;
       font-weight: 600;
-      background-color: #00e6e6;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #00e6e6, #00b3b3);
       color: #000;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 230, 230, 0.3);
     }
 
     .btn:hover {
-      background-color: #00b3b3;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 230, 230, 0.5);
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.85);
       font-size: 0.95rem;
+      margin-top: 4rem;
     }
 
     .footer-links a {
       margin: 0 0.75rem;
+      color: #00e6e6;
     }
 
+    .footer-links a:hover {
+      color: #00ffff;
+    }
+
+    /* Animationen */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.98); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsiv */
     @media (max-width: 600px) {
       header h1 {
         font-size: 2.2rem;
       }
 
-      .btn {
-        display: block;
-        margin: 1rem auto;
+      .btn-grid {
+        flex-direction: column;
       }
     }
   </style>
@@ -131,17 +163,11 @@
   <main>
     <section>
       <h2>Wer wir sind</h2>
-      <p>
-        <strong>D&T Transporte</strong> ist eine leidenschaftliche virtuelle Spedition, die im <em>Euro Truck Simulator 2</em> und <em>American Truck Simulator</em> aktiv ist – sowohl im Multiplayer über <strong>TruckersMP</strong> als auch im entspannten Einzelspielermodus.
-      </p>
-      <p>
-        Bei uns entscheidest du selbst: Teamwork im Convoy oder entspannte Solo-Fahrt? Unser Motto: <strong>Freiheit auf der Straße – gemeinsam oder allein.</strong>
-      </p>
-      <p>
-        Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> dokumentierst du deine Touren effizient – ganz gleich, wie du unterwegs bist.
-      </p>
+      <p><strong>D&T Transporte</strong> ist eine engagierte virtuelle Spedition, aktiv im Multiplayer-Modus von <em>Euro Truck Simulator 2</em> und <em>American Truck Simulator</em> über <strong>TruckersMP</strong>, ebenso wie im entspannten Einzelspieler-Modus.</p>
+      <p>Du entscheidest selbst: Multiplayer-Herausforderungen im Team oder entspannte Solo-Fahrten. Unser Motto: <strong>Freiheit auf der Straße – gemeinsam oder allein.</strong></p>
+      <p>Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> behältst du jederzeit den Überblick über deine Fahrten – egal wie du unterwegs bist.</p>
 
-      <div>
+      <div class="btn-grid">
         <a href="ueber-uns.html" class="btn">Über uns</a>
         <a href="fahrer.html" class="btn">Unsere Fahrer</a>
         <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
