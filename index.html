@@ -2,10 +2,11 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>D&T Transporte</title>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Grundstil zurücksetzen */
     * {
       margin: 0;
       padding: 0;
@@ -14,16 +15,17 @@
 
     body {
       font-family: 'Rajdhani', sans-serif;
-      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
       background-size: cover;
-      color: white;
+      color: #fff;
+      line-height: 1.6;
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.85);
       text-align: center;
       padding: 3rem 2rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     }
 
     header img {
@@ -44,88 +46,84 @@
     }
 
     main {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 3rem 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: 3rem auto;
+      padding: 3rem 2rem;
+      background-color: rgba(0, 0, 0, 0.75);
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      box-shadow: 0 0 20px rgba(0, 230, 230, 0.2);
     }
 
     h2 {
       font-size: 2rem;
       color: #00e6e6;
       border-bottom: 2px solid #00e6e6;
-      padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
     }
 
     p {
       font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    /* Button Styling */
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      background: #00e6e6;
-      color: black;
-      font-weight: normal;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      margin: 1rem 0.5rem;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #00b3b3;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.8);
-      margin-top: 3rem;
-      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
     }
 
     a {
       color: #00e6e6;
       text-decoration: none;
+      transition: color 0.3s;
     }
 
     a:hover {
-      text-decoration: underline;
       color: #00ffff;
+      text-decoration: underline;
     }
 
-    .footer-btns a {
-      margin-left: 1rem;
-    }
-
-    .back-link {
-      color: #00e6e6;
-      font-size: 1.1rem;
-      text-decoration: none;
-      margin-top: 1.5rem;
+    .btn {
       display: inline-block;
+      padding: 1rem 2rem;
+      margin: 0.75rem 0.5rem 0 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background-color: #00e6e6;
+      color: #000;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
     }
 
-    .back-link:hover {
-      text-decoration: underline;
-      color: #00ffff;
+    .btn:hover {
+      background-color: #00b3b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 0.95rem;
+    }
+
+    .footer-links a {
+      margin: 0 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .btn {
+        display: block;
+        margin: 1rem auto;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <a href="index.html"><img src="Logo D&T Transporte.png" alt="D&T Transporte Logo"></a> <!-- Link zum Logo, führt zur Hauptseite -->
+    <a href="index.html">
+      <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
+    </a>
     <h1>D&T Transporte</h1>
     <p>Willkommen bei unserer virtuellen Spedition – Gemeinsam rollen wir voran!</p>
   </header>
@@ -134,29 +132,31 @@
     <section>
       <h2>Wer wir sind</h2>
       <p>
-        <strong>D&T Transporte</strong> ist eine leidenschaftliche virtuelle Spedition, die sich sowohl auf den Multiplayer von <em>Euro Truck Simulator 2</em> und <em>American Truck Simulator</em> im <strong>TruckersMP (TMP)</strong> konzentriert, als auch Solo-Fahrten in einer entspannten Atmosphäre fördert.
+        <strong>D&T Transporte</strong> ist eine leidenschaftliche virtuelle Spedition, die im <em>Euro Truck Simulator 2</em> und <em>American Truck Simulator</em> aktiv ist – sowohl im Multiplayer über <strong>TruckersMP</strong> als auch im entspannten Einzelspielermodus.
       </p>
       <p>
-        Jeder Fahrer entscheidet selbst, ob er die Herausforderung im Multiplayer sucht oder lieber alleine fährt. Bei uns ist beides möglich – du kannst dich jederzeit für den Weg entscheiden, der dir am meisten Spaß macht. Unser Motto lautet: <strong>Freiheit auf der Straße, sei es im Team oder solo.</strong>
+        Bei uns entscheidest du selbst: Teamwork im Convoy oder entspannte Solo-Fahrt? Unser Motto: <strong>Freiheit auf der Straße – gemeinsam oder allein.</strong>
       </p>
       <p>
-        Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> kannst du deinen Fortschritt stets verfolgen und deine Fahrten dokumentieren, egal ob du alleine oder im TMP-Modus unterwegs bist.
+        Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> dokumentierst du deine Touren effizient – ganz gleich, wie du unterwegs bist.
       </p>
 
-      <!-- Buttons direkt unter der Willkommensnachricht -->
-      <a href="ueber-uns.html" class="btn">Über uns</a>
-      <a href="fahrer.html" class="btn">Unsere Fahrer</a>
-      <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
-      <a href="fuhrpark.html" class="btn">Unser Fuhrpark</a>
+      <div>
+        <a href="ueber-uns.html" class="btn">Über uns</a>
+        <a href="fahrer.html" class="btn">Unsere Fahrer</a>
+        <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
+        <a href="fuhrpark.html" class="btn">Unser Fuhrpark</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-btns">      
+    <div class="footer-links">
       <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
       <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a> |
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
   </footer>
+
 </body>
 </html>
