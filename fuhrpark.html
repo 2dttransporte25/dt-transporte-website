@@ -66,6 +66,19 @@
       margin-bottom: 1rem;
     }
 
+    .driver-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .driver-images img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -125,6 +138,27 @@
       <p>
         Ansonsten gilt: <strong>Gestalte deinen Truck so individuell wie du willst</strong> – Fahrspaß, Wiedererkennungswert und dein persönlicher Stil stehen im Vordergrund.
       </p>
+
+      <!-- Hier fügen wir die Bilder der Fahrer und ihrer Trucks ein -->
+      <div class="driver-images">
+        <div class="driver">
+          <img src="fahrer1.jpg" alt="Fahrer 1">
+          <p>Fahrer 1 – Scania</p>
+        </div>
+        <div class="driver">
+          <img src="fahrer2.jpg" alt="Fahrer 2">
+          <p>Fahrer 2 – Volvo</p>
+        </div>
+        <div class="driver">
+          <img src="fahrer3.jpg" alt="Fahrer 3">
+          <p>Fahrer 3 – MAN</p>
+        </div>
+        <div class="driver">
+          <img src="fahrer4.jpg" alt="Fahrer 4">
+          <p>Fahrer 4 – Mercedes</p>
+        </div>
+        <!-- Fügen Sie weitere Fahrerbilder nach Bedarf hinzu -->
+      </div>
     </section>
 
     <!-- Der "Zurück zur Hauptseite" Link wird hier unten hinzugefügt -->
@@ -133,8 +167,7 @@
 
   <footer>
     <div class="footer-btns">
-      
-     <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
+      <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
       <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a> |
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
