@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>D&T Transporte – Virtuelle Spedition</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -19,48 +19,11 @@
       color: white;
     }
 
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.7);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-links a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #00ffff;
-    }
-
-    .nav-button a {
-      background-color: #007bff;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .nav-button a:hover {
-      background-color: #0099ff;
-    }
-
     header {
+      background-color: rgba(0, 0, 0, 0.85);
       text-align: center;
-      padding: 3rem 2rem 1rem 2rem;
+      padding: 3rem 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     }
 
     header img.logo {
@@ -109,11 +72,11 @@
       font-size: 1.1rem;
       background: white;
       color: black;
+      font-weight: normal;
       border: 2px solid #00e6e6;
       border-radius: 10px;
       cursor: pointer;
       text-decoration: none;
-      margin: 1rem 0.5rem;
       transition: all 0.3s ease;
       box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
     }
@@ -123,6 +86,14 @@
       color: white;
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0, 230, 230, 0.4);
+    }
+
+    .button-container.centered-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
     }
 
     footer {
@@ -144,10 +115,7 @@
       color: #00ffff;
     }
 
-    .footer-btns a {
-      margin-left: 1rem;
-    }
-
+    /* Cookie Banner */
     .cookie-banner {
       background-color: rgba(0, 0, 0, 0.8);
       color: white;
@@ -185,18 +153,6 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-links">
-      <a href="ueber-uns.html">Über uns</a>
-      <a href="fuhrpark.html">Fuhrpark</a>
-      <a href="events.html">Events</a>
-      <a href="das-team.html">Das Team</a>
-    </div>
-    <div class="nav-button">
-      <a href="bewerbung.html">Jetzt bewerben</a>
-    </div>
-  </nav>
-
   <header>
     <a href="index.html">
       <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo" class="logo">
@@ -208,30 +164,35 @@
   <main>
     <section>
       <h2>Wer wir sind</h2>
-      <p><strong>D&T Transporte</strong> ist eine leidenschaftliche virtuelle Spedition für Euro Truck Simulator 2 & American Truck Simulator – egal ob Multiplayer über TruckersMP oder solo. Jeder kann frei entscheiden, wie er fahren will.</p>
-      <p>Unsere Tools: <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> & <strong>SpedV</strong>. Damit behältst du deine Leistungen immer im Blick!</p>
+      <p>
+        <strong>D&T Transporte</strong> ist eine leidenschaftliche virtuelle Spedition für Euro Truck Simulator 2 & American Truck Simulator – egal ob Multiplayer über TruckersMP oder solo. Jeder kann frei entscheiden, wie er fahren will.
+      </p>
+      <p>
+        Unsere Tools: <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> & <strong>SpedV</strong>. Damit behältst du deine Leistungen immer im Blick!
+      </p>
 
-      <div class="button-container">
+      <div class="button-container centered-buttons">
         <a href="ueber-uns.html" class="btn">Über uns</a>
         <a href="fahrer.html" class="btn">Unsere Fahrer</a>
         <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
-        <a href="fuhrpark.html" class="btn">Unser Fuhrpark</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-btns">
+    <div class="footer-btns">      
       <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
       <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a> |
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
   </footer>
 
+  <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookieBanner">
     <p>
-      Wir verwenden Cookies, um Ihnen die beste Erfahrung zu bieten. Durch Klick auf „Alle akzeptieren“ stimmen Sie dem zu.
-      <a href="datenschutzerklaerung.html">Mehr erfahren</a>
+      Wir verwenden Cookies auf unserer Website, um Ihnen die relevanteste Erfahrung zu bieten, indem wir uns an Ihre Präferenzen erinnern und Besuche wiederholen. 
+      Indem Sie auf „Alle akzeptieren“ klicken, stimmen Sie der Verwendung ALLER Cookies zu. 
+      Sie können jedoch die <a href="datenschutzerklaerung.html">Datenschutzerklärung</a> lesen, um mehr über den Datenschutz zu erfahren.
     </p>
     <button onclick="acceptCookies()">Alle akzeptieren</button>
   </div>
@@ -248,5 +209,7 @@
       }
     }
   </script>
+
 </body>
 </html>
+
