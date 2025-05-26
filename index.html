@@ -19,11 +19,48 @@
       color: white;
     }
 
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00ffff;
+    }
+
+    .nav-button a {
+      background-color: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .nav-button a:hover {
+      background-color: #0099ff;
+    }
+
     header {
-      background-color: rgba(0, 0, 0, 0.85);
       text-align: center;
-      padding: 3rem 2rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      padding: 3rem 2rem 1rem 2rem;
     }
 
     header img.logo {
@@ -72,7 +109,6 @@
       font-size: 1.1rem;
       background: white;
       color: black;
-      font-weight: normal;
       border: 2px solid #00e6e6;
       border-radius: 10px;
       cursor: pointer;
@@ -80,7 +116,6 @@
       margin: 1rem 0.5rem;
       transition: all 0.3s ease;
       box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
-      transform: translateY(0);
     }
 
     .btn:hover {
@@ -113,20 +148,6 @@
       margin-left: 1rem;
     }
 
-    .back-link {
-      color: #00e6e6;
-      font-size: 1.1rem;
-      text-decoration: none;
-      margin-top: 1.5rem;
-      display: inline-block;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
-      color: #00ffff;
-    }
-
-    /* Cookie Banner */
     .cookie-banner {
       background-color: rgba(0, 0, 0, 0.8);
       color: white;
@@ -163,6 +184,19 @@
   </style>
 </head>
 <body>
+
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="fuhrpark.html">Fuhrpark</a>
+      <a href="events.html">Events</a>
+      <a href="das-team.html">Das Team</a>
+    </div>
+    <div class="nav-button">
+      <a href="bewerbung.html">Jetzt bewerben</a>
+    </div>
+  </nav>
+
   <header>
     <a href="index.html">
       <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo" class="logo">
@@ -174,15 +208,8 @@
   <main>
     <section>
       <h2>Wer wir sind</h2>
-      <p>
-        <strong>D&T Transporte</strong> ist eine leidenschaftliche virtuelle Spedition, die sich sowohl auf den Multiplayer von <em>Euro Truck Simulator 2</em> und <em>American Truck Simulator</em> im <strong>TruckersMP (TMP)</strong> konzentriert, als auch Solo-Fahrten in einer entspannten Atmosphäre fördert.
-      </p>
-      <p>
-        Jeder Fahrer entscheidet selbst, ob er die Herausforderung im Multiplayer sucht oder lieber alleine fährt. Bei uns ist beides möglich – du kannst dich jederzeit für den Weg entscheiden, der dir am meisten Spaß macht. Unser Motto lautet: <strong>Freiheit auf der Straße, sei es im Team oder solo.</strong>
-      </p>
-      <p>
-        Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> kannst du deinen Fortschritt stets verfolgen und deine Fahrten dokumentieren, egal ob du alleine oder im TMP-Modus unterwegs bist.
-      </p>
+      <p><strong>D&T Transporte</strong> ist eine leidenschaftliche virtuelle Spedition für Euro Truck Simulator 2 & American Truck Simulator – egal ob Multiplayer über TruckersMP oder solo. Jeder kann frei entscheiden, wie er fahren will.</p>
+      <p>Unsere Tools: <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> & <strong>SpedV</strong>. Damit behältst du deine Leistungen immer im Blick!</p>
 
       <div class="button-container">
         <a href="ueber-uns.html" class="btn">Über uns</a>
@@ -194,19 +221,17 @@
   </main>
 
   <footer>
-    <div class="footer-btns">      
+    <div class="footer-btns">
       <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
       <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a> |
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
   </footer>
 
-  <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookieBanner">
     <p>
-      Wir verwenden Cookies auf unserer Website, um Ihnen die relevanteste Erfahrung zu bieten, indem wir uns an Ihre Präferenzen erinnern und Besuche wiederholen. 
-      Indem Sie auf „Alle akzeptieren“ klicken, stimmen Sie der Verwendung ALLER Cookies zu. 
-      Sie können jedoch die <a href="datenschutzerklaerung.html">Datenschutzerklärung</a> lesen, um mehr über den Datenschutz zu erfahren.
+      Wir verwenden Cookies, um Ihnen die beste Erfahrung zu bieten. Durch Klick auf „Alle akzeptieren“ stimmen Sie dem zu.
+      <a href="datenschutzerklaerung.html">Mehr erfahren</a>
     </p>
     <button onclick="acceptCookies()">Alle akzeptieren</button>
   </div>
@@ -217,7 +242,6 @@
       document.getElementById('cookieBanner').style.display = 'none';
     }
 
-    // Check if cookie already set
     window.onload = function() {
       if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
         document.getElementById('cookieBanner').style.display = 'none';
