@@ -14,7 +14,7 @@
 
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url("background.jpg") no-repeat center center fixed;
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url("d&t.png") no-repeat center center fixed;
       background-size: cover;
       color: white;
     }
@@ -165,7 +165,7 @@
 <body>
   <header>
     <a href="index.html">
-      <img src="Logo_DT_Transporte.png" alt="D&T Transporte Logo" class="logo">
+      <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo" class="logo">
     </a>
     <h1>D&T Transporte</h1>
     <p>Willkommen bei unserer virtuellen Spedition – Gemeinsam rollen wir voran!</p>
@@ -213,5 +213,16 @@
 
   <script>
     function acceptCookies() {
-      // Set a cookie to remember that the user has accepted cookies
-      document.cookie = "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:5
+      document.cookie = "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    // Check if cookie already set
+    window.onload = function() {
+      if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
+        document.getElementById('cookieBanner').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
