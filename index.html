@@ -125,6 +125,41 @@
       text-decoration: underline;
       color: #00ffff;
     }
+
+    /* Cookie Banner */
+    .cookie-banner {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .cookie-banner a {
+      color: #00e6e6;
+      text-decoration: underline;
+    }
+
+    .cookie-banner a:hover {
+      color: #00ffff;
+    }
+
+    .cookie-banner button {
+      background: #00e6e6;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cookie-banner button:hover {
+      background: #00b3b3;
+    }
   </style>
 </head>
 <body>
@@ -165,5 +200,11 @@
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
   </footer>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner">
+    Wir verwenden Cookies auf unserer Website, um Ihnen die relevanteste Erfahrung zu bieten, indem wir uns an Ihre Präferenzen erinnern und Besuche wiederholen. Indem Sie auf „Alle akzeptieren“ klicken, stimmen Sie der Verwendung ALLER Cookies zu. Sie können jedoch die „Cookie-Einstellungen“ öffnen, um eine kontrollierte Einwilligung zu erteilen. Falls Sie mehr über den Datenschutz auf unserer Website herausfinden möchten, sehen Sie sich bitte unsere Datenschutzerklärung an: <a href="datenschutzerklaerung.html">Mehr erfahren</a>
+    <button>Alle akzeptieren</button>
+  </div>
 </body>
 </html>
