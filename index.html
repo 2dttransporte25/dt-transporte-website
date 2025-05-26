@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D&T Transporte</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400  ;700&display=swap" rel="stylesheet">
+  <title>D&T Transporte – Virtuelle Spedition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,7 +14,7 @@
 
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url("d&t.png") no-repeat center center fixed;
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url("background.jpg") no-repeat center center fixed;
       background-size: cover;
       color: white;
     }
@@ -136,15 +136,15 @@
       bottom: 0;
       width: 100%;
       z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .cookie-banner a {
-      color: #00e6e6;
-      text-decoration: underline;
-    }
-
-    .cookie-banner a:hover {
-      color: #00ffff;
+    .cookie-banner p {
+      margin-right: 1rem;
+      flex: 1;
     }
 
     .cookie-banner button {
@@ -165,7 +165,7 @@
 <body>
   <header>
     <a href="index.html">
-      <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo" class="logo">
+      <img src="Logo_DT_Transporte.png" alt="D&T Transporte Logo" class="logo">
     </a>
     <h1>D&T Transporte</h1>
     <p>Willkommen bei unserer virtuellen Spedition – Gemeinsam rollen wir voran!</p>
@@ -181,7 +181,7 @@
         Jeder Fahrer entscheidet selbst, ob er die Herausforderung im Multiplayer sucht oder lieber alleine fährt. Bei uns ist beides möglich – du kannst dich jederzeit für den Weg entscheiden, der dir am meisten Spaß macht. Unser Motto lautet: <strong>Freiheit auf der Straße, sei es im Team oder solo.</strong>
       </p>
       <p>
-        Mit Tools wie <a href="https://hub.truckyapp.com/vtchub Login - Trucky - The Virtual Trucker Companion App Login - Trucky - The Virtual Trucker Companion App " target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> kannst du deinen Fortschritt stets verfolgen und deine Fahrten dokumentieren, egal ob du alleine oder im TMP-Modus unterwegs bist.
+        Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank"><strong>Trucky</strong></a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> kannst du deinen Fortschritt stets verfolgen und deine Fahrten dokumentieren, egal ob du alleine oder im TMP-Modus unterwegs bist.
       </p>
 
       <div class="button-container">
@@ -195,16 +195,23 @@
 
   <footer>
     <div class="footer-btns">      
-      <a href="https://truckersmp.com/vtc/79837 TruckersMP - Virtual Trucking Company - D&amp;T Transporte TruckersMP - Virtual Trucking Company - D&amp;T Transporte " target="_blank">TruckersMP VTC-Seite</a> |
-      <a href="https://discord.gg/uE5zRy26gn  " target="_blank">Discord beitreten</a> |
+      <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
+      <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a> |
       <a href="impressum.html" target="_blank">Impressum</a>
     </div>
   </footer>
 
   <!-- Cookie Banner -->
-  <div class="cookie-banner">
-    Wir verwenden Cookies auf unserer Website, um Ihnen die relevanteste Erfahrung zu bieten, indem wir uns an Ihre Präferenzen erinnern und Besuche wiederholen. Indem Sie auf „Alle akzeptieren“ klicken, stimmen Sie der Verwendung ALLER Cookies zu. Sie können jedoch die „Cookie-Einstellungen“ öffnen, um eine kontrollierte Einwilligung zu erteilen. Falls Sie mehr über den Datenschutz auf unserer Website herausfinden möchten, sehen Sie sich bitte unsere Datenschutzerklärung an: <a href="datenschutzerklaerung.html">Mehr erfahren</a>
-    <button>Alle akzeptieren</button>
+  <div class="cookie-banner" id="cookieBanner">
+    <p>
+      Wir verwenden Cookies auf unserer Website, um Ihnen die relevanteste Erfahrung zu bieten, indem wir uns an Ihre Präferenzen erinnern und Besuche wiederholen. 
+      Indem Sie auf „Alle akzeptieren“ klicken, stimmen Sie der Verwendung ALLER Cookies zu. 
+      Sie können jedoch die <a href="datenschutzerklaerung.html">Datenschutzerklärung</a> lesen, um mehr über den Datenschutz zu erfahren.
+    </p>
+    <button onclick="acceptCookies()">Alle akzeptieren</button>
   </div>
-</body>
-</html>
+
+  <script>
+    function acceptCookies() {
+      // Set a cookie to remember that the user has accepted cookies
+      document.cookie = "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:5
