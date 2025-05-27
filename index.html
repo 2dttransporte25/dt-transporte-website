@@ -2,219 +2,132 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>D&T Transporte – Next Level Spedition</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D&T Transporte – Virtuelle Spedition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #00fff7;
-      --dark: #0a0a0a;
-      --light: #f0f0f0;
-      --accent: #ff00ff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      --primary: #00bcd4;
+      --background: #121212;
+      --text: #f5f5f5;
+      --accent: #ff4081;
     }
 
     body {
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle at top, #111 0%, #000 100%);
-      color: var(--light);
-      overflow-x: hidden;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     header {
-      height: 100vh;
-      background: url("d&t.png") center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      backdrop-filter: brightness(0.6);
-      position: relative;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    header * {
-      z-index: 2;
-    }
-
-    .logo {
-      width: 150px;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 0 10px var(--primary));
-    }
-
-    h1 {
-      font-size: 4rem;
-      color: var(--primary);
-      text-shadow: 0 0 15px var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    p.lead {
-      font-size: 1.3rem;
-      color: #ccc;
-      max-width: 600px;
-      margin-bottom: 2rem;
-    }
-
-    .btn {
-      padding: 1rem 2rem;
-      border: 2px solid var(--primary);
-      background: transparent;
-      color: var(--primary);
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      margin: 0.5rem;
-    }
-
-    .btn:hover {
       background: var(--primary);
-      color: #000;
-      box-shadow: 0 0 25px var(--primary);
-      transform: scale(1.05);
+      padding: 1.5rem;
+      text-align: center;
     }
 
-    main {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     section {
-      margin-bottom: 3rem;
+      padding: 3rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
     }
 
     h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
       color: var(--accent);
-      text-shadow: 0 0 10px var(--accent);
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-      color: #ccc;
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #e91e63;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      background: #111;
-      font-size: 0.95rem;
-      color: #888;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      background-color: #1e1e1e;
     }
 
     footer a {
       color: var(--primary);
-      margin: 0 0.5rem;
       text-decoration: none;
     }
 
-    footer a:hover {
-      color: #fff;
-      text-shadow: 0 0 5px var(--primary);
-    }
-
-    /* Cookie Banner */
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #111;
-      color: #ccc;
-      padding: 1rem;
-      text-align: center;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .cookie-banner button {
-      padding: 0.5rem 1rem;
-      background: var(--primary);
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .cookie-banner button:hover {
-      background: #00cccc;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="Logo D&T Transporte.png" alt="Logo" class="logo">
     <h1>D&T Transporte</h1>
-    <p class="lead">Willkommen in der Spedition der Zukunft – wir fahren nicht, wir gleiten.</p>
-    <div>
-      <a href="#about" class="btn">Über uns</a>
-      <a href="bewerbung.html" class="btn">Join Now</a>
-    </div>
+    <nav>
+      <a href="#about">Über uns</a>
+      <a href="#join">Mitmachen</a>
+      <a href="#links">Links</a>
+    </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>Was ist D&T?</h2>
-      <p><strong>D&T Transporte</strong> ist mehr als nur eine virtuelle Spedition. Wir leben die Leidenschaft für LKW-Simulation, ob im Multiplayer auf TruckersMP oder im Singleplayer-Modus.</p>
-      <p>Unsere Flotte nutzt moderne Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank">Trucky</a>, <strong>TrucksBook</strong> & <strong>SpedV</strong>, um deine Fahrten zu tracken und deine Erfolge zu feiern.</p>
-    </section>
+  <section id="about">
+    <h2>Was ist D&T?</h2>
+    <p><strong>D&T Transporte</strong> ist nicht einfach nur eine virtuelle Spedition – wir sind eine Bewegung. Unsere Leidenschaft gilt dem virtuellen Fernverkehr – ob auf <strong>TruckersMP</strong> oder solo im Singleplayer.</p>
+    <p>Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank">Trucky</a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> dokumentieren wir jede Fahrt – und feiern jeden Kilometer.</p>
+    <p>Wir fahren nicht. <strong>Wir gleiten.</strong></p>
+  </section>
 
-    <section>
-      <h2>Links & Community</h2>
-      <p>Tritt unserer aktiven Community bei:</p>
-      <div>
-        <a href="https://truckersmp.com/vtc/79837" class="btn" target="_blank">TruckersMP VTC</a>
-        <a href="https://discord.gg/uE5zRy26gn" class="btn" target="_blank">Discord</a>
-        <a href="impressum.html" class="btn">Impressum</a>
-      </div>
-    </section>
-  </main>
+  <section id="join">
+    <h2>Werde Teil des Teams</h2>
+    <p>Du liebst virtuelle Speditionen? Du willst mit Gleichgesinnten auf Europas Straßen unterwegs sein?</p>
+    <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
+  </section>
+
+  <section id="links">
+    <h2>Links & Community</h2>
+    <ul>
+      <li><a href="https://truckersmp.com/" target="_blank">TruckersMP</a></li>
+      <li><a href="https://trucksbook.eu" target="_blank">TrucksBook</a></li>
+      <li><a href="https://sped-v.de" target="_blank">SpedV</a></li>
+      <li><a href="https://discord.gg/deinserver" target="_blank">Unser Discord</a></li>
+    </ul>
+  </section>
 
   <footer>
     © 2025 D&T Transporte | <a href="impressum.html">Impressum</a>
   </footer>
-
-  <div class="cookie-banner" id="cookieBanner">
-    <p>Wir nutzen Cookies, um deine Erfahrung zu verbessern. Durch „Alle akzeptieren“ stimmst du dem zu.</p>
-    <button onclick="acceptCookies()">Alle akzeptieren</button>
-  </div>
-
-  <script>
-    function acceptCookies() {
-      document.cookie = "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-      document.getElementById('cookieBanner').style.display = 'none';
-    }
-
-    window.onload = function () {
-      if (document.cookie.includes("cookiesAccepted=true")) {
-        document.getElementById('cookieBanner').style.display = 'none';
-      }
-    };
-  </script>
 
 </body>
 </html>
