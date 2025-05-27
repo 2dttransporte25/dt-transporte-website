@@ -3,95 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abrechnungssystem</title>
+  <title>Abrechnungssystem - D&T Transporte</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
-      margin: 40px;
-      color: #333;
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .tabs {
-      display: flex;
-      border-bottom: 2px solid #ddd;
-      max-width: 700px;
+
+    body {
+      background: url('d&t.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: 0 0 15px #00f0ff;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8rem;
+      color: #00f0ff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #00f0ff;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #00f0ff;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
       margin-bottom: 20px;
     }
-    .tab {
-      padding: 12px 24px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      border-bottom: none;
-      font-weight: 600;
-      color: #555;
-      transition: color 0.3s, border-color 0.3s;
-      user-select: none;
+
+    a.button {
+      display: inline-block;
+      background-color: #00f0ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: all 0.3s ease;
+      margin-top: 30px;
     }
-    .tab:hover {
-      color: #0078d7;
+    a.button:hover {
+      background-color: #0ff;
+      box-shadow: 0 0 20px #00f0ff;
+      transform: scale(1.05);
     }
-    .tab.active {
-      border-color: #0078d7 #0078d7 white;
-      color: #0078d7;
-      background: white;
-      border-radius: 6px 6px 0 0;
-      font-weight: 700;
-    }
-    .content {
-      background: white;
-      border: 2px solid #0078d7;
-      border-radius: 0 6px 6px 6px;
-      padding: 24px;
-      max-width: 700px;
-      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
-    }
-    h2 {
-      margin-top: 0;
-      color: #0078d7;
-    }
-    p {
-      line-height: 1.6;
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <div class="tabs">
-    <div class="tab active" onclick="showContent('abrechnung')">Abrechnungssystem</div>
-    <div class="tab" onclick="showContent('info')">Information</div>
+  <div class="container">
+    <h1>💸 Abrechnungssystem</h1>
+
+    <h2>Abrechnung über SpedV</h2>
+    <p>
+      Unser Abrechnungssystem basiert auf dem bewährten SpedV-Standard, der speziell für die Speditions- und Logistikbranche entwickelt wurde.
+      Dadurch gewährleisten wir eine transparente, zuverlässige und effiziente Abrechnung aller Transporte.
+    </p>
+
+    <p>
+      Über SpedV können wir sämtliche Abrechnungsprozesse automatisieren, was Fehler reduziert und die Bearbeitungszeit deutlich verkürzt.
+      So profitieren unsere Fahrer und Partner von einer schnellen und korrekten Abrechnung.
+    </p>
+
+    <p>
+      Bei Fragen zur Abrechnung oder zu SpedV stehen wir dir jederzeit gerne zur Verfügung.
+    </p>
+
+    <a href="index.html" class="button">Zurück zur Startseite</a>
   </div>
 
-  <div id="abrechnung" class="content">
-    <h2>Abrechnungssystem</h2>
-    <p>
-      Unser Abrechnungssystem basiert auf dem SpedV-Standard, der speziell für den Speditions- und Logistikbereich entwickelt wurde. 
-      Über SpedV können alle Abrechnungsprozesse transparent und effizient abgewickelt werden.
-    </p>
-    <p>
-      Die Integration von SpedV ermöglicht eine automatisierte Datenübertragung, welche Fehler minimiert und den Abrechnungsprozess deutlich beschleunigt.
-      Dadurch profitieren unsere Kunden von einer schnelleren und zuverlässigeren Rechnungsstellung.
-    </p>
-  </div>
-
-  <div id="info" class="content" style="display:none;">
-    <h2>Information</h2>
-    <p>
-      Hier finden Sie weitere wichtige Informationen rund um unser Abrechnungssystem und dessen Vorteile.
-    </p>
-  </div>
-
-  <script>
-    function showContent(id) {
-      document.querySelectorAll('.tab').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.querySelectorAll('.content').forEach(content => {
-        content.style.display = 'none';
-      });
-      event.target.classList.add('active');
-      document.getElementById(id).style.display = 'block';
-    }
-  </script>
+  <footer>
+    &copy; 2025 D&T Transporte – Virtual Trucking Company
+  </footer>
 
 </body>
 </html>
