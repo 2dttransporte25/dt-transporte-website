@@ -2,162 +2,100 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>D&T Transporte</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --background: #000;
-      --text: #fff;
-      --accent: #ccc;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
     }
 
     body {
-      background-color: var(--background);
-      color: var(--text);
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
+      background: url('D&T.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
     }
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      border-bottom: 2px solid var(--accent);
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    header img {
+      width: 150px;
     }
 
-    .logo img {
-      height: 50px;
-      width: 50px;
-      object-fit: contain;
-    }
-
-    .logo-title {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: var(--text);
+    nav {
+      margin-top: 20px;
     }
 
     nav a {
-      color: var(--text);
-      margin-left: 1.5rem;
+      color: white;
       text-decoration: none;
-      font-weight: 500;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      padding: 10px 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      transition: background 0.3s;
     }
 
-    section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 0.5rem;
+    .main {
+      padding: 50px 20px;
     }
 
-    a {
-      color: var(--accent);
-    }
-
-    .btn {
+    .cta-button {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--text);
-      color: var(--background);
+      padding: 15px 30px;
+      margin-top: 30px;
+      font-size: 1.5rem;
+      background-color: #ff0000;
+      color: white;
       text-decoration: none;
-      border: 2px solid var(--accent);
-      border-radius: 0.5rem;
-      transition: all 0.3s ease;
+      border-radius: 10px;
+      transition: background 0.3s;
     }
 
-    .btn:hover {
-      background: var(--accent);
-      color: var(--background);
+    .cta-button:hover {
+      background-color: #cc0000;
     }
 
     footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: var(--accent);
-      border-top: 1px solid var(--accent);
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav {
-        margin-top: 1rem;
-      }
-
-      nav a {
-        margin: 0 0.5rem;
-      }
+      margin-top: 50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <img src="https://via.placeholder.com/50x50?text=D&T" alt="D&T Logo">
-      <div class="logo-title">D&T Transporte</div>
-    </div>
+    <img src="Logo D&T Transporte.png" alt="D&T Logo" />
     <nav>
-      <a href="#about">Über uns</a>
-      <a href="#join">Mitmachen</a>
-      <a href="#links">Links</a>
+      <a href="bewerbung.html">Jetzt Bewerben</a>
+      <a href="ueber-uns.html">Unser Team</a>
+      <a href="#">Abrechnungssystem</a>
+      <a href="https://discord.gg/dein-link" target="_blank">Unser Discord</a>
+      <a href="impressum.html">Impressum</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>Was ist D&T?</h2>
-    <p><strong>D&T Transporte</strong> ist nicht einfach nur eine virtuelle Spedition – wir sind eine Bewegung. Unsere Leidenschaft gilt dem virtuellen Fernverkehr – ob auf <strong>TruckersMP</strong> oder solo im Singleplayer.</p>
-    <p>Mit Tools wie <a href="https://hub.truckyapp.com/vtchub" target="_blank">Trucky</a>, <strong>TrucksBook</strong> und <strong>SpedV</strong> dokumentieren wir jede Fahrt – und feiern jeden Kilometer.</p>
-    <p>Wir fahren nicht. <strong>Wir gleiten.</strong></p>
-  </section>
-
-  <section id="join">
-    <h2>Werde Teil des Teams</h2>
-    <p>Du liebst virtuelle Speditionen? Du willst mit Gleichgesinnten auf Europas Straßen unterwegs sein?</p>
-    <a href="bewerbung.html" class="btn">Jetzt bewerben</a>
-  </section>
-
-  <section id="links">
-    <h2>Links & Community</h2>
-    <ul>
-      <li><a href="https://truckersmp.com/" target="_blank">TruckersMP</a></li>
-      <li><a href="https://trucksbook.eu" target="_blank">TrucksBook</a></li>
-      <li><a href="https://sped-v.de" target="_blank">SpedV</a></li>
-      <li><a href="https://discord.gg/deinserver" target="_blank">Unser Discord</a></li>
-    </ul>
+  <section class="main">
+    <h1>Willkommen bei D&T Transporte</h1>
+    <p>Dein zuverlässiger Partner für Transport und Logistik.</p>
+    <a href="bewerbung.html" class="cta-button">JETZT BEWERBEN</a>
   </section>
 
   <footer>
-    © 2025 D&T Transporte | <a href="impressum.html">Impressum</a>
+    <p>&copy; 2025 D&T Transporte | Alle Rechte vorbehalten.</p>
   </footer>
 
 </body>
 </html>
-
