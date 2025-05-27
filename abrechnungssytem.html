@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abrechnungssystem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .tab {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px 4px 0 0;
+        }
+        .tab.active {
+            background-color: #0056b3;
+        }
+        .content {
+            border: 1px solid #007BFF;
+            border-top: none;
+            padding: 20px;
+            border-radius: 0 4px 4px 4px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="tabs">
+        <div class="tab active" onclick="showContent('abrechnung')">Abrechnungssystem</div>
+        <div class="tab" onclick="showContent('info')">Information</div>
+    </div>
+
+    <div id="content-container">
+        <div id="abrechnung" class="content">
+            <h2>Abrechnungssystem</h2>
+            <p>
+                Unser Abrechnungssystem basiert auf dem SpedV-Standard, der speziell für den Speditions- und Logistikbereich entwickelt wurde. 
+                Über SpedV können alle Abrechnungsprozesse transparent und effizient abgewickelt werden.
+            </p>
+            <p>
+                Die Integration von SpedV ermöglicht eine automatisierte Datenübertragung, welche Fehler minimiert und den Abrechnungsprozess deutlich beschleunigt.
+                Dadurch profitieren unsere Kunden von einer schnelleren und zuverlässigeren Rechnungsstellung.
+            </p>
+        </div>
+
+        <div id="info" class="content" style="display:none;">
+            <h2>Information</h2>
+            <p>
+                Hier finden Sie weitere wichtige Informationen rund um unser Abrechnungssystem und dessen Vorteile.
+            </p>
+        </div>
+    </div>
+
+<script>
+    function showContent(id) {
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.content');
+
+        tabs.forEach(tab => tab.classList.remove('active'));
+        contents.forEach(content => content.style.display = 'none');
+
+        document.querySelector(`[onclick="showContent('${id}')"]`).classList.add('active');
+        document.getElementById(id).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
