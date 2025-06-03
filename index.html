@@ -2,10 +2,15 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>D&T Transporte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+    :root {
+      --primary-color: #00f0ff;
+      --text-light: #ffffff;
+      --bg-dark: rgba(0, 0, 0, 0.85);
+    }
 
     * {
       margin: 0;
@@ -17,56 +22,114 @@
       background: url('d&t.png') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Roboto', sans-serif;
-      color: white;
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 80px auto;
-      background: rgba(0, 0, 0, 0.85);
-      border-radius: 12px;
-      padding: 40px 30px;
-      box-shadow: 0 0 15px #00f0ff;
+      background-color: var(--bg-dark);
+      padding: 50px 40px;
+      border-radius: 16px;
+      max-width: 960px;
+      width: 100%;
+      box-shadow: 0 0 25px var(--primary-color);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 2.8rem;
-      color: #00f0ff;
       text-align: center;
-      margin-bottom: 20px;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+    }
+
+    p.description {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 35px;
     }
 
     .buttons {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 20px;
-      margin-top: 40px;
-      align-items: center;
+      justify-content: center;
     }
 
     .buttons a {
-      background-color: #00f0ff;
+      background-color: var(--primary-color);
       color: #000;
-      padding: 15px 30px;
-      border-radius: 10px;
-      font-size: 1.3rem;
-      text-decoration: none;
+      padding: 15px 25px;
+      border-radius: 8px;
       font-weight: bold;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 10px #00f0ff;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px var(--primary-color);
     }
 
     .buttons a:hover {
       background-color: #0ff;
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #00f0ff;
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px var(--primary-color);
     }
 
     footer {
       text-align: center;
       margin-top: 40px;
-      color: #aaa;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Cookie Banner */
+    #cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+      max-width: 400px;
+      z-index: 1000;
+    }
+
+    #cookie-banner button {
+      margin-top: 10px;
+      background-color: var(--primary-color);
+      border: none;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .buttons a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
@@ -74,8 +137,8 @@
 
   <div class="container">
     <h1>🌐 D&T Transporte</h1>
-    <p style="text-align:center; font-size: 1.1rem; margin-bottom: 30px;">
-      Willkommen bei <strong>D&T Transporte</strong> – deine virtuelle Spedition mit Herz, Teamgeist und Leidenschaft für den Straßenverkehr im Euro Truck Simulator 2 & ATS.  
+    <p class="description">
+      Willkommen bei <strong>D&T Transporte</strong> – deiner virtuellen Spedition mit Herz, Teamgeist und Leidenschaft für den Straßenverkehr im Euro Truck Simulator 2 & ATS.  
       <br><br>
       🚚 Seit April 2025 stehen wir für Freiheit, Struktur und eine familiäre Community – egal ob du Anfänger oder Veteran bist!
     </p>
@@ -90,9 +153,30 @@
     </div>
 
     <footer>
-      <p>&copy; 2025 D&T Transporte – Virtual Trucking Company</p>
+      &copy; 2025 D&T Transporte – Virtual Trucking Company
     </footer>
   </div>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner">
+    Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten. Mit der Nutzung stimmst du dem zu.
+    <br/>
+    <button onclick="acceptCookies()">Verstanden</button>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      document.getElementById("cookie-banner").style.display = "none";
+      localStorage.setItem("cookiesAccepted", "true");
+    }
+
+    // Zeige Cookie-Banner nur, wenn noch nicht akzeptiert
+    window.onload = () => {
+      if (localStorage.getItem("cookiesAccepted") === "true") {
+        document.getElementById("cookie-banner").style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
