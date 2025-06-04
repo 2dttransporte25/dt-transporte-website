@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D&T Transporte</title>
+  <title>D&T Transporte – Virtuelle Spedition</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -18,53 +18,19 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-      overflow: hidden;
-    }
-
     body {
+      background: url('d&t.png') no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Roboto', sans-serif;
       color: var(--text-light);
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       padding: 40px 20px;
-      position: relative;
-      background: #000;
-    }
-
-    canvas#matrix {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 255, 255, 0.03) 0px,
-        transparent 1px,
-        rgba(0, 255, 255, 0.03) 2px
-      );
-      pointer-events: none;
-      z-index: 0;
-      animation: scanlines 0.5s linear infinite;
-    }
-
-    @keyframes scanlines {
-      0% { background-position: 0 0; }
-      100% { background-position: 0 2px; }
     }
 
     .container {
-      position: relative;
-      z-index: 2;
       background-color: var(--bg-dark);
       padding: 50px 40px;
       border-radius: 16px;
@@ -72,6 +38,7 @@
       width: 100%;
       box-shadow: 0 0 25px var(--primary-color);
       animation: fadeIn 1.2s ease;
+      text-align: center;
     }
 
     @keyframes fadeIn {
@@ -82,28 +49,11 @@
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 2.8rem;
-      text-align: center;
       color: var(--primary-color);
       margin-bottom: 25px;
     }
 
-    .glitch {
-      animation: glitch 1.5s infinite alternate;
-      position: relative;
-      z-index: 1;
-    }
-
-    @keyframes glitch {
-      0% { text-shadow: 2px 0 red, -2px 0 cyan; }
-      20% { text-shadow: -2px 0 lime, 2px 0 magenta; }
-      40% { text-shadow: 2px 2px yellow, -2px -2px blue; }
-      60% { text-shadow: -2px 2px red, 2px -2px cyan; }
-      80% { text-shadow: 0 0 2px white; }
-      100% { text-shadow: 2px 0 red, -2px 0 cyan; }
-    }
-
     p.description {
-      text-align: center;
       font-size: 1.2rem;
       line-height: 1.6;
       margin-bottom: 35px;
@@ -114,24 +64,24 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
+      margin-bottom: 40px;
     }
 
     .buttons a {
-      background: linear-gradient(45deg, #00f0ff, #0ff, #00f0ff);
-      background-size: 200% auto;
+      background-color: var(--primary-color);
       color: #000;
       padding: 15px 25px;
       border-radius: 8px;
       font-weight: bold;
       text-decoration: none;
-      transition: 0.4s ease;
-      box-shadow: 0 0 15px #00f0ff;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px var(--primary-color);
     }
 
     .buttons a:hover {
-      background-position: right center;
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 0 25px #0ff;
+      background-color: #0ff;
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px var(--primary-color);
     }
 
     footer {
@@ -141,6 +91,22 @@
       color: #ccc;
     }
 
+    /* Live Map */
+    .live-map {
+      margin-top: 40px;
+      border: 2px solid var(--primary-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px var(--primary-color);
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    /* Cookie Banner */
     #cookie-banner {
       position: fixed;
       bottom: 20px;
@@ -179,91 +145,61 @@
       h1 {
         font-size: 2.2rem;
       }
+
+      iframe {
+        height: 300px;
+      }
     }
   </style>
 </head>
 <body>
 
-<canvas id="matrix"></canvas>
+  <div class="container">
+    <h1>🚚 D&T Transporte – Virtuelle Spedition</h1>
+    <p class="description">
+      Willkommen bei <strong>D&T Transporte</strong> – deiner virtuellen Spedition im <em>Euro Truck Simulator 2</em> & <em>ATS</em>.
+      <br><br>
+      Seit <strong>April 2025</strong> bieten wir Struktur, Tourenerfassung, ein starkes Teamgefühl & realistische Simulation mit einem Touch Technologie!
+    </p>
 
-<div class="container">
-  <h1 class="glitch">🌐 D&T Transporte</h1>
-  <p class="description">
-    Willkommen bei <strong>D&T Transporte</strong> – deiner virtuellen Spedition mit Herz, Teamgeist und Leidenschaft für den Straßenverkehr im Euro Truck Simulator 2 & ATS.
-    <br><br>
-    🚚 Seit April 2025 stehen wir für Freiheit, Struktur und eine familiäre Community – egal ob du Anfänger oder Veteran bist!
-  </p>
+    <div class="buttons">
+      <a href="bewerbung.html">📨 Jetzt Bewerben</a>
+      <a href="ueber-uns.html">👥 Unser Team</a>
+      <a href="fahrer.html">🚛 Unsere Fahrer</a>
+      <a href="abrechnungssytem.html">💸 Abrechnungssystem</a>
+      <a href="https://discord.gg/FXc9y3ahgz" target="_blank" rel="noopener noreferrer">💬 Unser Discord</a>
+      <a href="impressum.html">📄 Impressum</a>
+    </div>
 
-  <div class="buttons">
-    <a href="bewerbung.html">📨 Jetzt Bewerben</a>
-    <a href="ueber-uns.html">👥 Unser Team</a>
-    <a href="fahrer.html">🚛 Unsere Fahrer</a>
-    <a href="abrechnungssytem.html">💸 Abrechnungssystem</a>
-    <a href="https://discord.gg/FXc9y3ahgz" target="_blank">💬 Unser Discord</a>
-    <a href="impressum.html">📄 Impressum</a>
+    <div class="live-map">
+      <h2 style="margin: 20px 0; font-size: 1.6rem;">🗺️ Live Map – Fahrer unterwegs</h2>
+      <iframe src="https://www.sped-v.de/map/" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <footer>
+      &copy; 2025 D&T Transporte – Virtual Trucking Company
+    </footer>
   </div>
 
-  <footer>
-    &copy; 2025 D&T Transporte – Virtual Trucking Company
-  </footer>
-</div>
+  <!-- Cookie Banner -->
+  <div id="cookie-banner">
+    Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten. Mit der Nutzung stimmst du dem zu.
+    <br/>
+    <button onclick="acceptCookies()">Verstanden</button>
+  </div>
 
-<!-- Cookie Banner -->
-<div id="cookie-banner">
-  Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten. Mit der Nutzung stimmst du dem zu.
-  <br/>
-  <button onclick="acceptCookies()">Verstanden</button>
-</div>
-
-<script>
-  function acceptCookies() {
-    document.getElementById("cookie-banner").style.display = "none";
-    localStorage.setItem("cookiesAccepted", "true");
-  }
-
-  window.onload = () => {
-    if (localStorage.getItem("cookiesAccepted") === "true") {
+  <script>
+    function acceptCookies() {
       document.getElementById("cookie-banner").style.display = "none";
+      localStorage.setItem("cookiesAccepted", "true");
     }
-  }
 
-  // Matrix-Effekt
-  const canvas = document.getElementById('matrix');
-  const ctx = canvas.getContext('2d');
-
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-
-  const chars = "01█▓▒░".split("");
-  const fontSize = 14;
-  const columns = canvas.width / fontSize;
-  const drops = Array.from({ length: columns }).fill(1);
-
-  function draw() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#00f0ff";
-    ctx.font = fontSize + "px monospace";
-
-    drops.forEach((y, i) => {
-      const text = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(text, i * fontSize, y * fontSize);
-
-      if (y * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
+    window.onload = () => {
+      if (localStorage.getItem("cookiesAccepted") === "true") {
+        document.getElementById("cookie-banner").style.display = "none";
       }
-      drops[i]++;
-    });
-  }
-
-  setInterval(draw, 33);
-
-  window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
-</script>
+    }
+  </script>
 
 </body>
 </html>
