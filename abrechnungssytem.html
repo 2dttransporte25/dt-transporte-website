@@ -14,39 +14,54 @@
 
     body {
       font-family: 'Rajdhani', sans-serif;
-      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
-      background-size: cover;
+      background-color: #000;
       color: white;
-      padding: 2rem;
       min-height: 100vh;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 3rem auto;
-      background-color: rgba(0, 0, 0, 0.7);
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      text-align: center;
       padding: 3rem 2rem;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     }
 
-    h1 {
-      font-size: 2.5rem;
+    header img {
+      width: 120px;
+      filter: drop-shadow(0 0 5px white);
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
       color: #00e6e6;
-      text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    main {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: 3rem auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
     }
 
     h2 {
       font-size: 2rem;
       color: #00e6e6;
-      margin-bottom: 1.5rem;
       border-bottom: 2px solid #00e6e6;
       padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
       color: #eee;
@@ -77,31 +92,47 @@
       margin-top: 3rem;
       color: #aaa;
       font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1.5rem;
+    }
+
+    a {
+      color: #00e6e6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #00ffff;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>💸 Abrechnungssystem</h1>
+  <header>
+    <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo" />
+    <h1>Abrechnungssystem - D&T Transporte</h1>
+    <p>Unser zuverlässiges System für eine transparente Abrechnung</p>
+  </header>
 
-    <h2>Abrechnung über SpedV</h2>
-    <p>
-      Unser Abrechnungssystem basiert auf dem bewährten SpedV-Standard, der speziell für die Speditions- und Logistikbranche entwickelt wurde.
-      Dadurch gewährleisten wir eine transparente, zuverlässige und effiziente Abrechnung aller Transporte.
-    </p>
+  <main>
+    <section>
+      <h2>Abrechnung über SpedV</h2>
+      <p>
+        Unser Abrechnungssystem basiert auf dem bewährten SpedV-Standard, der speziell für die Speditions- und Logistikbranche entwickelt wurde.
+        Dadurch gewährleisten wir eine transparente, zuverlässige und effiziente Abrechnung aller Transporte.
+      </p>
+      <p>
+        Über SpedV können wir sämtliche Abrechnungsprozesse automatisieren, was Fehler reduziert und die Bearbeitungszeit deutlich verkürzt.
+        So profitieren unsere Fahrer und Partner von einer schnellen und korrekten Abrechnung.
+      </p>
+      <p>
+        Bei Fragen zur Abrechnung oder zu SpedV stehen wir dir jederzeit gerne zur Verfügung.
+      </p>
 
-    <p>
-      Über SpedV können wir sämtliche Abrechnungsprozesse automatisieren, was Fehler reduziert und die Bearbeitungszeit deutlich verkürzt.
-      So profitieren unsere Fahrer und Partner von einer schnellen und korrekten Abrechnung.
-    </p>
-
-    <p>
-      Bei Fragen zur Abrechnung oder zu SpedV stehen wir dir jederzeit gerne zur Verfügung.
-    </p>
-
-    <a href="index.html" class="button">Zurück zur Startseite</a>
-  </div>
+      <a href="index.html" class="button">Zurück zur Startseite</a>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 D&T Transporte – Virtual Trucking Company
