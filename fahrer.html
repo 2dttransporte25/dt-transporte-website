@@ -1,11 +1,22 @@
-             <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unsere Fahrer - D&T Transporte</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unsere Fahrer – D&T Transporte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --primary-color: #00f0ff;
+      --text-light: #ffffff;
+      --bg-dark: rgba(0, 0, 0, 0.7);
+      --btn-bg-start: #00e6e6;
+      --btn-bg-end: #00b3b3;
+      --btn-hover-start: #00ffff;
+      --btn-hover-end: #00cccc;
+    }
+
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -14,9 +25,40 @@
 
     body {
       font-family: 'Rajdhani', sans-serif;
-      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url("D&T Transporte Bild.jpg") no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+      color: var(--text-light);
+      background: transparent;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    canvas#matrix {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 255, 0.03) 0px,
+        transparent 1px,
+        rgba(0, 255, 255, 0.03) 2px
+      );
+      pointer-events: none;
+      z-index: 0;
+      animation: scanlines 0.5s linear infinite;
+    }
+
+    @keyframes scanlines {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 2px; }
     }
 
     header {
@@ -24,18 +66,21 @@
       text-align: center;
       padding: 3rem 2rem;
       box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      position: relative;
+      z-index: 1;
     }
 
     header img {
       width: 120px;
-      filter: drop-shadow(0 0 5px white);
+      filter: drop-shadow(0 0 5px var(--text-light));
       margin-bottom: 1rem;
     }
 
     header h1 {
       font-size: 3rem;
-      color: #00e6e6;
+      color: var(--primary-color);
       margin-bottom: 0.5rem;
+      text-shadow: 0 0 8px var(--primary-color);
     }
 
     header p {
@@ -44,33 +89,64 @@
     }
 
     main {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: var(--bg-dark);
       padding: 3rem 2rem;
       max-width: 800px;
       margin: 3rem auto;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      position: relative;
+      z-index: 1;
     }
 
     h2 {
       font-size: 2rem;
-      color: #00e6e6;
-      border-bottom: 2px solid #00e6e6;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
+      text-shadow: 0 0 6px var(--primary-color);
     }
 
     p {
       font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 1rem;
+      color: #ddd;
+    }
+
+    .driver-profile {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .driver-profile img {
+      width: 150px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.4);
+    }
+
+    .driver-info h3 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-bottom: 0.2rem;
+      text-shadow: 0 0 6px var(--primary-color);
+    }
+
+    .driver-info p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 0.8rem;
     }
 
     .btn {
       display: inline-block;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      background: linear-gradient(to right, #00e6e6, #00b3b3);
+      padding: 0.5rem 1.2rem;
+      font-size: 1rem;
+      background: linear-gradient(to right, var(--btn-bg-start), var(--btn-bg-end));
       color: black;
       font-weight: bold;
       border: none;
@@ -78,11 +154,24 @@
       cursor: pointer;
       text-decoration: none;
       transition: background 0.3s ease;
-      margin-top: 2rem;
     }
 
     .btn:hover {
-      background: linear-gradient(to right, #00ffff, #00cccc);
+      background: linear-gradient(to right, var(--btn-hover-start), var(--btn-hover-end));
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #00ffff;
+      text-decoration: underline;
     }
 
     footer {
@@ -92,80 +181,125 @@
       background-color: rgba(0, 0, 0, 0.8);
       margin-top: 3rem;
       font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
     }
 
-    a {
-      color: #00e6e6;
+    footer a {
+      color: var(--primary-color);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    a:hover {
-      text-decoration: underline;
+    footer a:hover {
       color: #00ffff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <canvas id="matrix"></canvas>
+
   <header>
-    <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo">
-    <h1>Unsere Fahrer - D&T Transporte</h1>
+    <img src="Logo D&T Transporte.png" alt="D&T Transporte Logo" />
+    <h1>Unsere Fahrer – D&amp;T Transporte</h1>
     <p>Unsere talentierten Fahrer in der Community</p>
   </header>
+
   <main>
     <section>
       <h2>Unsere Fahrer</h2>
-      <p>Hier listen wir alle Fahrer auf, die ein Teil von D&T Transporte sind. Gemeinsam rollen wir die Straßen!</p>
+      <p>Hier listen wir alle Fahrer auf, die ein Teil von D&amp;T Transporte sind. Gemeinsam rollen wir die Straßen!</p>
 
-      <!-- Fahrerprofil -->
       <!-- Fahrerprofil Darius -->
-<div style="display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
-  <img src="D&T Transporte Bild.jpg" alt="Darius - Inhaber" style="width: 150px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,255,255,0.4);">
-  <div>
-    <h3 style="font-size: 1.5rem; color: #00e6e6;">Darius</h3>
-    <p style="font-size: 1.1rem; color: #ccc;">Inhaber</p>
-    <a href="steckbrief-darius.html" class="btn" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 1rem;">Zum Steckbrief</a>
-  </div>
-</div>
+      <div class="driver-profile">
+        <img src="D&T Transporte Bild.jpg" alt="Darius - Inhaber" />
+        <div class="driver-info">
+          <h3>Darius</h3>
+          <p>Inhaber</p>
+          <a href="steckbrief-darius.html" class="btn">Zum Steckbrief</a>
+        </div>
+      </div>
 
-<!-- Fahrerprofil Tim -->
-<div style="display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
-  <img src="Tim.png" alt="Tim - Geschäftsleitung" style="width: 150px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,255,255,0.4);">
-  <div>
-    <h3 style="font-size: 1.5rem; color: #00e6e6;">Tim</h3>
-    <p style="font-size: 1.1rem; color: #ccc;">Geschäftsleitung</p>
-    <a href="steckbrief-tim.html" class="btn" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 1rem;">Zum Steckbrief</a>
-  </div>
-</div>
+      <!-- Fahrerprofil Tim -->
+      <div class="driver-profile">
+        <img src="Tim.png" alt="Tim - Geschäftsleitung" />
+        <div class="driver-info">
+          <h3>Tim</h3>
+          <p>Geschäftsleitung</p>
+          <a href="steckbrief-tim.html" class="btn">Zum Steckbrief</a>
+        </div>
+      </div>
 
-<!-- Fahrerprofil F-Peters -->
-<div style="display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
-  <img src="F-Peters.png" alt="F-Peters - Fahrer" style="width: 150px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,255,255,0.4);">
-  <div>
-    <h3 style="font-size: 1.5rem; color: #00e6e6;">F-Peters</h3>
-    <p style="font-size: 1.1rem; color: #ccc;">Fahrer</p>
-<a href="steckbrief-f-peters.html" class="btn" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 1rem;">Zum Steckbrief</a>
-  </div>
-</div>
+      <!-- Fahrerprofil F-Peters -->
+      <div class="driver-profile">
+        <img src="F-Peters.png" alt="F-Peters - Fahrer" />
+        <div class="driver-info">
+          <h3>F-Peters</h3>
+          <p>Fahrer</p>
+          <a href="steckbrief-f-peters.html" class="btn">Zum Steckbrief</a>
+        </div>
+      </div>
 
-<!-- Fahrerprofil Sven -->
-<div style="display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
-  <img src="Sven.png" alt="Sven - Fahrer" style="width: 150px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,255,255,0.4);">
-  <div>
-    <h3 style="font-size: 1.5rem; color: #00e6e6;">Sven</h3>
-    <p style="font-size: 1.1rem; color: #ccc;">Fahrer</p>
-    <a href="steckbrief-sven.html" class="btn" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 1rem;">Zum Steckbrief</a>
-  </div>
-</div>
+      <!-- Fahrerprofil Sven -->
+      <div class="driver-profile">
+        <img src="Sven.png" alt="Sven - Fahrer" />
+        <div class="driver-info">
+          <h3>Sven</h3>
+          <p>Fahrer</p>
+          <a href="steckbrief-sven.html" class="btn">Zum Steckbrief</a>
+        </div>
+      </div>
 
-
-      <a class="back-link" href="index.html" style="display: inline-block; margin-top: 2rem;">&#8592; Zurück zur Hauptseite</a>
+      <a href="index.html" class="back-link">&#8592; Zurück zur Hauptseite</a>
     </section>
   </main>
+
   <footer>
     <p>
-      <a href="https://truckersmp.com/vtc/79837" target="_blank">TruckersMP VTC-Seite</a> |
-      <a href="https://discord.gg/uE5zRy26gn" target="_blank">Discord beitreten</a>
+      <a href="https://truckersmp.com/vtc/79837" target="_blank" rel="noopener noreferrer">TruckersMP VTC-Seite</a> |
+      <a href="https://discord.gg/uE5zRy26gn" target="_blank" rel="noopener noreferrer">Discord beitreten</a>
     </p>
   </footer>
+
+  <script>
+    // Matrix-Effekt
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*+-=';
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#00f0ff';
+      ctx.font = fontSize + 'px Rajdhani, monospace';
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 35);
+  </script>
 </body>
 </html>
