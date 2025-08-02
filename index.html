@@ -2,268 +2,91 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D&T Transporte</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #00f0ff;
-      --text-light: #ffffff;
-      --bg-dark: rgba(0, 0, 0, 0.85);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      overflow: hidden;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      color: var(--text-light);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-      position: relative;
-      background: #000;
-    }
-
-    canvas#matrix {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 255, 255, 0.03) 0px,
-        transparent 1px,
-        rgba(0, 255, 255, 0.03) 2px
-      );
-      pointer-events: none;
-      z-index: 0;
-      animation: scanlines 0.5s linear infinite;
-    }
-
-    @keyframes scanlines {
-      0% { background-position: 0 0; }
-      100% { background-position: 0 2px; }
-    }
-
-    .container {
-      position: relative;
-      z-index: 2;
-      background-color: var(--bg-dark);
-      padding: 50px 40px;
-      border-radius: 16px;
-      max-width: 960px;
-      width: 100%;
-      box-shadow: 0 0 25px var(--primary-color);
-      animation: fadeIn 1.2s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.8rem;
-      text-align: center;
-      color: var(--primary-color);
-      margin-bottom: 25px;
-    }
-
-    .glitch {
-      animation: glitch 1.5s infinite alternate;
-      position: relative;
-      z-index: 1;
-    }
-
-    @keyframes glitch {
-      0% { text-shadow: 2px 0 red, -2px 0 cyan; }
-      20% { text-shadow: -2px 0 lime, 2px 0 magenta; }
-      40% { text-shadow: 2px 2px yellow, -2px -2px blue; }
-      60% { text-shadow: -2px 2px red, 2px -2px cyan; }
-      80% { text-shadow: 0 0 2px white; }
-      100% { text-shadow: 2px 0 red, -2px 0 cyan; }
-    }
-
-    p.description {
-      text-align: center;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 35px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .buttons a {
-      background: linear-gradient(45deg, #00f0ff, #0ff, #00f0ff);
-      background-size: 200% auto;
-      color: #000;
-      padding: 15px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.4s ease;
-      box-shadow: 0 0 15px #00f0ff;
-    }
-
-    .buttons a:hover {
-      background-position: right center;
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 0 25px #0ff;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-
-    #cookie-banner {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #111;
-      color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #000;
-      max-width: 400px;
-      z-index: 1000;
-    }
-
-    #cookie-banner button {
-      margin-top: 10px;
-      background-color: var(--primary-color);
-      border: none;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      .buttons a {
-        width: 100%;
-        text-align: center;
-      }
-
-      .container {
-        padding: 30px 20px;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Darula Transporte & Logistik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow p-6 flex justify-between items-center">
+    <h1 class="text-3xl font-bold text-blue-600">Darula Transporte & Logistik</h1>
+    <nav aria-label="Hauptnavigation" class="space-x-6">
+      <a href="#start" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Start</a>
+      <a href="#leistungen" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Leistungen</a>
+      <a href="#unternehmen" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Unternehmen</a>
+      <a href="#fuhrpark" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Fuhrpark</a>
+      <a href="#kontakt" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Kontakt</a>
+    </nav>
+  </header>
 
-<canvas id="matrix"></canvas>
+  <main class="flex-grow">
+    <!-- Start -->
+    <section id="start" class="bg-blue-50 p-10 text-center flex flex-col items-center justify-center" aria-label="Startbereich">
+      <h2 class="text-4xl font-semibold mb-4">Zuverlässig. Pünktlich. Sicher.</h2>
+      <p class="text-lg mb-6 max-w-xl">Ihre Experten für 3,5 t und 7,5 t Transporte — keine Umzüge.</p>
+      <button type="button" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition-colors duration-200">Jetzt anfragen</button>
+    </section>
 
-<div class="container">
-  <h1 class="glitch">🌐 D&T Transporte</h1>
-  <p class="description">
-    Willkommen bei <strong>D&T Transporte</strong> – deiner virtuellen Spedition mit Herz, Teamgeist und Leidenschaft für den Straßenverkehr im Euro Truck Simulator 2 & ATS.
-    <br><br>
-    🚚 Seit April 2025 stehen wir für Freiheit, Struktur und eine familiäre Community – egal ob du Anfänger oder Veteran bist!
-  </p>
+    <!-- Leistungen -->
+    <section id="leistungen" class="p-10 bg-white" aria-labelledby="leistungen-title">
+      <h3 id="leistungen-title" class="text-2xl font-semibold mb-6 text-center">Unsere Leistungen</h3>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <article class="shadow-md p-6 rounded bg-white">
+          <h4 class="text-xl font-semibold mb-2">3,5 t Transporte</h4>
+          <p>Für kleine bis mittlere Liefermengen – schnell, zuverlässig und flexibel.</p>
+        </article>
+        <article class="shadow-md p-6 rounded bg-white">
+          <h4 class="text-xl font-semibold mb-2">7,5 t Transporte</h4>
+          <p>Ideal für größere Frachten – termingerecht und sicher ans Ziel gebracht.</p>
+        </article>
+      </div>
+    </section>
 
-  <div class="buttons">
-    <a href="bewerbung.html">📨 Jetzt Bewerben</a>
-    <a href="ueber-uns.html">👥 Unser Team</a>
-    <a href="fahrer.html">🚛 Unsere Fahrer</a>
-    <a href="abrechnungssytem.html">💸 Abrechnungssystem</a>
-    <a href="https://discord.gg/FXc9y3ahgz" target="_blank">💬 Unser Discord</a>
-    <a href="impressum.html">📄 Impressum</a>
-  </div>
+    <!-- Unternehmen -->
+    <section id="unternehmen" class="bg-gray-50 p-10" aria-labelledby="unternehmen-title">
+      <h3 id="unternehmen-title" class="text-2xl font-semibold mb-6 text-center">Darula Transporte & Logistik</h3>
+      <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">
+        Wir sind ein spezialisiertes Transportunternehmen mit Schwerpunkt auf hochwertigen
+        3,5 t und 7,5 t Transporten – ohne Nebenleistungen oder Umzüge. Unsere Säulen:
+        Pünktlichkeit, Kommunikation und ein zuverlässiger Service.
+      </p>
+    </section>
 
-  <footer>
-    &copy; 2025 D&T Transporte – Virtual Trucking Company
+    <!-- Fuhrpark -->
+    <section id="fuhrpark" class="p-10 bg-white" aria-labelledby="fuhrpark-title">
+      <h3 id="fuhrpark-title" class="text-2xl font-semibold mb-6 text-center">Unser Fuhrpark</h3>
+      <div class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article>
+          <h4 class="text-xl font-semibold mb-2">3,5 t Fahrzeuge</h4>
+          <p>Moderne Fahrzeuge für flexible Einsatzbereiche.</p>
+        </article>
+        <article>
+          <h4 class="text-xl font-semibold mb-2">7,5 t Fahrzeuge</h4>
+          <p>Robuste Lkw für größere Lieferungen, immer termingetreu.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="bg-gray-50 p-10" aria-labelledby="kontakt-title">
+      <h3 id="kontakt-title" class="text-2xl font-semibold mb-6 text-center">Kontakt</h3>
+      <address class="max-w-xl mx-auto space-y-4 not-italic text-center text-lg">
+        <div>
+          📞 <a href="tel:+49123456789" class="text-blue-600 hover:underline">+49 123 456789</a>
+        </div>
+        <div>
+          ✉️ <a href="mailto:kontakt@darula-transporte.de" class="text-blue-600 hover:underline">kontakt@darula-transporte.de</a>
+        </div>
+        <div>
+          📍 Musterstraße 1, 12345 Musterstadt
+        </div>
+      </address>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white p-6 text-center">
+    &copy; 2025 Darula Transporte & Logistik. Alle Rechte vorbehalten.
   </footer>
-</div>
-
-<!-- Cookie Banner -->
-<div id="cookie-banner">
-  Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten. Mit der Nutzung stimmst du dem zu.
-  <br/>
-  <button onclick="acceptCookies()">Verstanden</button>
-</div>
-
-<script>
-  function acceptCookies() {
-    document.getElementById("cookie-banner").style.display = "none";
-    localStorage.setItem("cookiesAccepted", "true");
-  }
-
-  window.onload = () => {
-    if (localStorage.getItem("cookiesAccepted") === "true") {
-      document.getElementById("cookie-banner").style.display = "none";
-    }
-  }
-
-  // Matrix-Effekt
-  const canvas = document.getElementById('matrix');
-  const ctx = canvas.getContext('2d');
-
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-
-  const chars = "01█▓▒░".split("");
-  const fontSize = 14;
-  const columns = canvas.width / fontSize;
-  const drops = Array.from({ length: columns }).fill(1);
-
-  function draw() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#00f0ff";
-    ctx.font = fontSize + "px monospace";
-
-    drops.forEach((y, i) => {
-      const text = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(text, i * fontSize, y * fontSize);
-
-      if (y * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-      drops[i]++;
-    });
-  }
-
-  setInterval(draw, 33);
-
-  window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
-</script>
-
 </body>
 </html>
