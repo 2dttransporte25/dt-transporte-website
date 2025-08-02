@@ -5,56 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Darula Transporte & Logistik</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body class="min-h-screen bg-gray-100 text-gray-800 flex flex-col">
   <!-- Header -->
   <header class="bg-white shadow p-6 flex justify-between items-center">
     <h1 class="text-3xl font-bold text-blue-600">Darula Transporte & Logistik</h1>
-    <nav aria-label="Hauptnavigation" class="space-x-6">
-      <a href="#start" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Start</a>
-      <a href="#leistungen" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Leistungen</a>
-      <a href="#unternehmen" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Unternehmen</a>
-      <a href="#fuhrpark" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Fuhrpark</a>
-      <a href="#kontakt" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Kontakt</a>
+    <nav class="space-x-6">
+      <a href="#start" class="text-gray-700 hover:text-blue-600">Start</a>
+      <a href="#leistungen" class="text-gray-700 hover:text-blue-600">Leistungen</a>
+      <a href="#ueber-uns" class="text-gray-700 hover:text-blue-600">Über uns</a>
+      <a href="#unternehmen" class="text-gray-700 hover:text-blue-600">Unternehmen</a>
+      <a href="#fuhrpark" class="text-gray-700 hover:text-blue-600">Fuhrpark</a>
+      <a href="#kontakt" class="text-gray-700 hover:text-blue-600">Kontakt</a>
     </nav>
   </header>
 
   <main class="flex-grow">
     <!-- Start -->
-    <section id="start" class="bg-blue-50 p-10 text-center flex flex-col items-center justify-center" aria-label="Startbereich">
+    <section id="start" class="bg-blue-50 p-10 text-center">
       <h2 class="text-4xl font-semibold mb-4">Zuverlässig. Pünktlich. Sicher.</h2>
-      <p class="text-lg mb-6 max-w-xl">Ihre Experten für 3,5 t und 7,5 t Transporte — keine Umzüge.</p>
-      <button type="button" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition-colors duration-200">Jetzt anfragen</button>
+      <p class="text-lg mb-6 max-w-xl mx-auto">Ihre Experten für 3,5 t und 7,5 t Transporte — keine Umzüge.</p>
+      <a href="anfrage.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Jetzt anfragen</a>
     </section>
 
     <!-- Leistungen -->
-    <section id="leistungen" class="p-10 bg-white" aria-labelledby="leistungen-title">
-      <h3 id="leistungen-title" class="text-2xl font-semibold mb-6 text-center">Unsere Leistungen</h3>
+    <section id="leistungen" class="p-10 bg-white">
+      <h3 class="text-2xl font-semibold mb-6 text-center">Unsere Leistungen</h3>
       <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         <article class="shadow-md p-6 rounded bg-white">
           <h4 class="text-xl font-semibold mb-2">3,5 t Transporte</h4>
           <p>Für kleine bis mittlere Liefermengen – schnell, zuverlässig und flexibel.</p>
+          <a href="35t.html" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Mehr erfahren</a>
         </article>
         <article class="shadow-md p-6 rounded bg-white">
           <h4 class="text-xl font-semibold mb-2">7,5 t Transporte</h4>
           <p>Ideal für größere Frachten – termingerecht und sicher ans Ziel gebracht.</p>
+          <a href="75t.html" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Mehr erfahren</a>
         </article>
       </div>
     </section>
 
-    <!-- Unternehmen -->
-    <section id="unternehmen" class="bg-gray-50 p-10" aria-labelledby="unternehmen-title">
-      <h3 id="unternehmen-title" class="text-2xl font-semibold mb-6 text-center">Darula Transporte & Logistik</h3>
+    <!-- Über uns -->
+    <section id="ueber-uns" class="bg-gray-100 p-10">
+      <h3 class="text-2xl font-semibold mb-6 text-center">Über uns</h3>
       <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">
+        Darula Transporte & Logistik ist ein familiengeführtes Unternehmen mit Sitz in Deutschland.
+        Unsere langjährige Erfahrung im Güterverkehr macht uns zum verlässlichen Partner für Firmen,
+        die Wert auf Qualität, Pünktlichkeit und Kommunikation legen.
+      </p>
+    </section>
+
+    <!-- Unternehmen -->
+    <section id="unternehmen" class="bg-gray-50 p-10">
+      <h3 class="text-2xl font-semibold mb-6 text-center">Darula Transporte & Logistik</h3>
+      <p class="max-w-3xl mx-auto text-center text-lg">
         Wir sind ein spezialisiertes Transportunternehmen mit Schwerpunkt auf hochwertigen
-        3,5 t und 7,5 t Transporten – ohne Nebenleistungen oder Umzüge. Unsere Säulen:
+        3,5 t und 7,5 t Transporten – keine Umzüge, keine Nebenleistungen. Unsere Säulen:
         Pünktlichkeit, Kommunikation und ein zuverlässiger Service.
       </p>
     </section>
 
     <!-- Fuhrpark -->
-    <section id="fuhrpark" class="p-10 bg-white" aria-labelledby="fuhrpark-title">
-      <h3 id="fuhrpark-title" class="text-2xl font-semibold mb-6 text-center">Unser Fuhrpark</h3>
+    <section id="fuhrpark" class="p-10 bg-white">
+      <h3 class="text-2xl font-semibold mb-6 text-center">Unser Fuhrpark</h3>
       <div class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <article>
           <h4 class="text-xl font-semibold mb-2">3,5 t Fahrzeuge</h4>
@@ -68,8 +86,8 @@
     </section>
 
     <!-- Kontakt -->
-    <section id="kontakt" class="bg-gray-50 p-10" aria-labelledby="kontakt-title">
-      <h3 id="kontakt-title" class="text-2xl font-semibold mb-6 text-center">Kontakt</h3>
+    <section id="kontakt" class="bg-gray-50 p-10">
+      <h3 class="text-2xl font-semibold mb-6 text-center">Kontakt</h3>
       <address class="max-w-xl mx-auto space-y-4 not-italic text-center text-lg">
         <div>
           📞 <a href="tel:+49123456789" class="text-blue-600 hover:underline">+49 123 456789</a>
