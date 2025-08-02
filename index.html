@@ -9,50 +9,75 @@
     html {
       scroll-behavior: smooth;
     }
+
+    h1, h2, h3, h4 {
+      font-family: 'Georgia', serif;
+    }
+
+    .text-orange-brand {
+      color: #f7941d;
+    }
+
+    .bg-orange-brand {
+      background-color: #f7941d;
+    }
+
+    .text-blue-brand {
+      color: #00a8e8;
+    }
+
+    .bg-blue-brand {
+      background-color: #00a8e8;
+    }
   </style>
 </head>
 <body class="min-h-screen bg-gray-100 text-gray-800 flex flex-col">
-  <!-- Header -->
-  <header class="bg-white shadow p-6 flex justify-between items-center">
-    <h1 class="text-3xl font-bold text-blue-600">Darula Transporte & Logistik</h1>
-    <nav class="space-x-6">
-      <a href="#start" class="text-gray-700 hover:text-blue-600">Start</a>
-      <a href="#leistungen" class="text-gray-700 hover:text-blue-600">Leistungen</a>
-      <a href="#ueber-uns" class="text-gray-700 hover:text-blue-600">Über uns</a>
-      <a href="#unternehmen" class="text-gray-700 hover:text-blue-600">Unternehmen</a>
-      <a href="#fuhrpark" class="text-gray-700 hover:text-blue-600">Fuhrpark</a>
-      <a href="#kontakt" class="text-gray-700 hover:text-blue-600">Kontakt</a>
+
+  <!-- Header mit Logo -->
+  <header class="bg-white shadow p-6 flex flex-col md:flex-row justify-between items-center">
+    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+      <img src="darula_logo.png" alt="Darula Transporte Logo" class="h-16 w-auto" />
+      <h1 class="text-3xl font-bold text-blue-brand">Darula Transporte & Logistik</h1>
+    </div>
+    <nav class="space-x-4 text-center md:text-left">
+      <a href="#start" class="text-gray-700 hover:text-blue-brand">Start</a>
+      <a href="#leistungen" class="text-gray-700 hover:text-blue-brand">Leistungen</a>
+      <a href="#ueber-uns" class="text-gray-700 hover:text-blue-brand">Über uns</a>
+      <a href="#unternehmen" class="text-gray-700 hover:text-blue-brand">Unternehmen</a>
+      <a href="#fuhrpark" class="text-gray-700 hover:text-blue-brand">Fuhrpark</a>
+      <a href="#kontakt" class="text-gray-700 hover:text-blue-brand">Kontakt</a>
     </nav>
   </header>
 
   <main class="flex-grow">
+
     <!-- Start -->
     <section id="start" class="bg-blue-50 p-10 text-center">
-      <h2 class="text-4xl font-semibold mb-4">Zuverlässig. Pünktlich. Sicher.</h2>
+      <h2 class="text-4xl font-semibold mb-4 text-blue-brand">Zuverlässig. Pünktlich. Sicher.</h2>
       <p class="text-lg mb-6 max-w-xl mx-auto">Ihre Experten für 3,5 t und 7,5 t Transporte — keine Umzüge.</p>
-      <a href="anfrage.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Jetzt anfragen</a>
+      <a href="anfrage.html" class="bg-blue-brand text-white px-6 py-3 rounded hover:bg-blue-700 transition">Jetzt anfragen</a>
     </section>
 
     <!-- Leistungen -->
     <section id="leistungen" class="p-10 bg-white">
-      <h3 class="text-2xl font-semibold mb-6 text-center">Unsere Leistungen</h3>
+      <h3 class="text-2xl font-semibold mb-6 text-center text-blue-brand">Unsere Leistungen</h3>
       <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <article class="shadow-md p-6 rounded bg-white">
-          <h4 class="text-xl font-semibold mb-2">3,5 t Transporte</h4>
+        <article class="shadow-md p-6 rounded bg-white border-l-4 border-orange-brand">
+          <h4 class="text-xl font-semibold mb-2 text-orange-brand">3,5 t Transporte</h4>
           <p>Für kleine bis mittlere Liefermengen – schnell, zuverlässig und flexibel.</p>
-          <a href="35t.html" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Mehr erfahren</a>
+          <a href="35t.html" class="inline-block mt-4 bg-blue-brand text-white px-4 py-2 rounded hover:bg-blue-700">Mehr erfahren</a>
         </article>
-        <article class="shadow-md p-6 rounded bg-white">
-          <h4 class="text-xl font-semibold mb-2">7,5 t Transporte</h4>
+        <article class="shadow-md p-6 rounded bg-white border-l-4 border-orange-brand">
+          <h4 class="text-xl font-semibold mb-2 text-orange-brand">7,5 t Transporte</h4>
           <p>Ideal für größere Frachten – termingerecht und sicher ans Ziel gebracht.</p>
-          <a href="75t.html" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Mehr erfahren</a>
+          <a href="75t.html" class="inline-block mt-4 bg-blue-brand text-white px-4 py-2 rounded hover:bg-blue-700">Mehr erfahren</a>
         </article>
       </div>
     </section>
 
     <!-- Über uns -->
     <section id="ueber-uns" class="bg-gray-100 p-10">
-      <h3 class="text-2xl font-semibold mb-6 text-center">Über uns</h3>
+      <h3 class="text-2xl font-semibold mb-6 text-center text-blue-brand">Über uns</h3>
       <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">
         Darula Transporte & Logistik ist ein familiengeführtes Unternehmen mit Sitz in Deutschland.
         Unsere langjährige Erfahrung im Güterverkehr macht uns zum verlässlichen Partner für Firmen,
@@ -62,7 +87,7 @@
 
     <!-- Unternehmen -->
     <section id="unternehmen" class="bg-gray-50 p-10">
-      <h3 class="text-2xl font-semibold mb-6 text-center">Darula Transporte & Logistik</h3>
+      <h3 class="text-2xl font-semibold mb-6 text-center text-blue-brand">Darula Transporte & Logistik</h3>
       <p class="max-w-3xl mx-auto text-center text-lg">
         Wir sind ein spezialisiertes Transportunternehmen mit Schwerpunkt auf hochwertigen
         3,5 t und 7,5 t Transporten – keine Umzüge, keine Nebenleistungen. Unsere Säulen:
@@ -72,14 +97,14 @@
 
     <!-- Fuhrpark -->
     <section id="fuhrpark" class="p-10 bg-white">
-      <h3 class="text-2xl font-semibold mb-6 text-center">Unser Fuhrpark</h3>
+      <h3 class="text-2xl font-semibold mb-6 text-center text-blue-brand">Unser Fuhrpark</h3>
       <div class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <article>
-          <h4 class="text-xl font-semibold mb-2">3,5 t Fahrzeuge</h4>
+          <h4 class="text-xl font-semibold mb-2 text-orange-brand">3,5 t Fahrzeuge</h4>
           <p>Moderne Fahrzeuge für flexible Einsatzbereiche.</p>
         </article>
         <article>
-          <h4 class="text-xl font-semibold mb-2">7,5 t Fahrzeuge</h4>
+          <h4 class="text-xl font-semibold mb-2 text-orange-brand">7,5 t Fahrzeuge</h4>
           <p>Robuste Lkw für größere Lieferungen, immer termingetreu.</p>
         </article>
       </div>
@@ -87,23 +112,24 @@
 
     <!-- Kontakt -->
     <section id="kontakt" class="bg-gray-50 p-10">
-      <h3 class="text-2xl font-semibold mb-6 text-center">Kontakt</h3>
+      <h3 class="text-2xl font-semibold mb-6 text-center text-blue-brand">Kontakt</h3>
       <address class="max-w-xl mx-auto space-y-4 not-italic text-center text-lg">
         <div>
-          📞 <a href="tel:+49123456789" class="text-blue-600 hover:underline">+49 123 456789</a>
+          📞 <a href="tel:+49123456789" class="text-blue-brand hover:underline">+49 123 456789</a>
         </div>
         <div>
-          ✉️ <a href="mailto:kontakt@darula-transporte.de" class="text-blue-600 hover:underline">kontakt@darula-transporte.de</a>
+          ✉️ <a href="mailto:kontakt@darula-transporte.de" class="text-blue-brand hover:underline">kontakt@darula-transporte.de</a>
         </div>
         <div>
           📍 Musterstraße 1, 12345 Musterstadt
         </div>
       </address>
     </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="bg-blue-600 text-white p-6 text-center">
+  <footer class="bg-blue-brand text-white p-6 text-center">
     &copy; 2025 Darula Transporte & Logistik. Alle Rechte vorbehalten.
   </footer>
 </body>
